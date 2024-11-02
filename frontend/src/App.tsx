@@ -12,11 +12,6 @@ function App() {
   return (
     <>
       <Navbar />
-      <Button variant="contained">Hello world</Button>
-      <StyledButton>
-        <ButtonMui />
-      </StyledButton>
-
       <Routes>
         <Route path="/" element={<LandingPage />} />
 
