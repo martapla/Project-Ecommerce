@@ -1,8 +1,8 @@
 import React from 'react'
-//import imageHero from '../../../assets/images/imageHero.jpg'
+import imageHero from '../../../assets/images/imageHero.jpg'
 import vpink from '../../../assets/images/vpink.jpeg'
 import inside from '../../../assets/images/inside.jpeg'
-import { Box, Typography, Button } from '@mui/material'
+import { Box, Typography, Button,TextField } from '@mui/material'
 
 const Landing = () => {
   return (
@@ -119,8 +119,7 @@ const Landing = () => {
     >
       Collection
   </Button>
-
-
+                    {/* Section - Our Studio  */}
   <Box
     sx={{
       flex: 1,
@@ -190,6 +189,101 @@ const Landing = () => {
           maxWidth: '100%',
         }}
       />
+    </Box>
+                             {/* Section - Get in Touch  */}
+    <Box
+      sx={{
+        width: '90%',
+        display: 'flex',
+        flexDirection: { xs: 'column', md: 'row' }, 
+        justifyContent: 'center',
+        gap: 4,
+        padding: 4,
+        mt: 20,
+        //border:'1px green solid'
+      }}
+    >
+     
+       {/* Left Side - Input for Email */}
+      <Box sx={{ flex: 1, display: 'flex', justifyContent: 'center', flexDirection:'column'}}>
+        <Typography
+          variant="h2"
+          sx={{
+            fontFamily: 'Mandali, sans-serif', 
+            fontSize: 60,
+            fontWeight: 200,                   
+            color: '#444444',
+            textAlign: 'left',
+            mb:3
+          }}
+        >
+          Get in touch
+        </Typography>
+
+        <TextField
+          label="Your Email"
+          variant="outlined"
+          placeholder="example@example.com"
+          fullWidth
+          sx={{
+            width: '100%',
+            fontFamily: 'Mandali, sans-serif',
+            fontSize: 18,
+          }}
+        />
+         <TextField
+          label="Message"
+          variant="outlined"
+          placeholder="Write your message here..."
+          multiline
+          rows={4}  
+          fullWidth
+          sx={{
+            width: '100%',
+            mt: 2,
+            fontFamily: 'Mandali, sans-serif',
+            fontSize: 18,
+          }}
+        />
+        
+        <Button
+          variant="contained"
+          onClick={() => alert('Submited !!!')}
+          sx={{
+            mt: 4,
+            width: '80%',
+            mr: 'auto',
+            ml: 'auto',
+            backgroundColor: '#e57390', 
+            color: 'white',
+            padding: '12px',
+            fontFamily: 'Mandali, sans-serif',
+            fontSize: 18,
+            textTransform: 'none',
+            '&:hover': {
+              backgroundColor: '#d26080', 
+            },
+          }}
+        >
+          Submit
+        </Button>
+      </Box>
+
+      {/* Right Side - Image */}
+      <Box sx={{ flex: 1, display: 'flex', justifyContent: 'center' }}>
+        <Box
+          component="img"
+          src={imageHero}
+          alt="redimage"
+          sx={{
+            width: '100%', 
+            borderRadius: 2, 
+            border: '10px solid white',  
+            boxShadow: 3,
+            objectFit: 'cover',
+          }}
+        />
+      </Box>
     </Box>
   </Box>
     
