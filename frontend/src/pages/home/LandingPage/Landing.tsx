@@ -3,8 +3,12 @@ import imageHero from '../../../assets/images/imageHero.jpg'
 import vpink from '../../../assets/images/vpink.jpeg'
 import inside from '../../../assets/images/inside.jpeg'
 import { Box, Typography, Button,TextField } from '@mui/material'
+import { useNavigate } from 'react-router-dom';
 
 const Landing = () => {
+
+  const navigate = useNavigate();
+
   return (
     <>
     <Box
@@ -56,7 +60,7 @@ const Landing = () => {
         objectFit: 'cover',
         opacity: 0.9
       }} />
-
+                             {/* Section - Brand Philosophy */}
     <Typography
       variant="h2"
       sx={{
@@ -96,7 +100,7 @@ const Landing = () => {
 
     <Button
       variant="contained"
-      onClick={() => alert('see-collection')}
+      onClick={() => navigate('/collection')}
       sx={{
         backgroundColor: 'white',       
         color: '#e57390',               
@@ -108,6 +112,7 @@ const Landing = () => {
         fontWeight: 300,
         textTransform: 'none',          
         boxShadow: '-10px 0px 0px #e57390', 
+        transition: 'all 0.3s ease-in-out',
         '&:hover': {
           backgroundColor: 'white', 
           color:  '#e57390',               
@@ -200,7 +205,6 @@ const Landing = () => {
         gap: 4,
         padding: 4,
         mt: 20,
-        //border:'1px green solid'
       }}
     >
      
