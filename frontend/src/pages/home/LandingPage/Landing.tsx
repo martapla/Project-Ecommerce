@@ -2,6 +2,8 @@ import React from 'react'
 import imageHero from '../../../assets/images/imageHero.jpg'
 import vpink from '../../../assets/images/vpink.jpeg'
 import inside from '../../../assets/images/inside.jpeg'
+import pinklace from '../../../assets/images/pinklace.jpeg'
+import draw from '../../../assets/images/draw.jpeg'
 import { Box, Typography, Button,TextField } from '@mui/material'
 import { useNavigate } from 'react-router-dom';
 
@@ -97,7 +99,7 @@ const Landing = () => {
         Here, you’re seen, cherished, embraced – wrapped in something made just for you, 
         to wear like a second, truest skin.
     </Typography>
-
+                               {/* Button Collection */}
     <Button
       variant="contained"
       onClick={() => navigate('/collection')}
@@ -119,11 +121,28 @@ const Landing = () => {
           borderColor:  '#e57390',          
           boxShadow: '10px 0px 0px #e57390',   
         },
-        mb: 14,                          
+        mb: { xs: '60px', md: '100px' },                     
       }}
     >
       Collection
   </Button>
+
+  <Box
+        component="img"
+        src={pinklace}
+        alt="Descripción de la imagen"
+        sx={{
+          flex: 1,
+          width: '80%',
+          height: '800px',
+          mb: { xs: '60px', md: '100px' },
+          borderRadius: 2,
+          border: '10px solid white',
+          boxShadow: 3,
+        }}
+        
+      />
+
                     {/* Section - Our Studio  */}
   <Box
     sx={{
@@ -142,7 +161,8 @@ const Landing = () => {
           fontSize: 60,
           fontWeight: 200,
           color: '#444444',
-          mb: 3
+          mb: 3,
+          // mt: 6
         }}
       >
         Our Studio
@@ -179,21 +199,47 @@ const Landing = () => {
         By prioritizing sustainability, we create pieces that are not only stunning but also mindful of our impact on the world.
       </Typography>
 
+
       <Box
-        component="img"
-        src={inside}
-        alt="Descripción de la imagen"
         sx={{
-          flex: 1,
-          width: '60%',
-          height: 'auto',
-          margin: { xs: '20px auto', md: '0 auto' },
-          borderRadius: 2,
-          border: '10px solid white',
-          boxShadow: 3,
-          maxWidth: '100%',
+          display: 'flex',
+          flexDirection: { xs: 'column', md: 'row' }, 
+          margin: { xs: '0 auto', md: '80px auto' },
+          alignItems: 'center', 
+          justifyContent: 'center', 
+          gap: 4, 
         }}
-      />
+      >
+          <Box
+            component="img"
+            src={draw}
+            alt="Descripción de la imagen"
+            sx={{
+              flex: 1,
+              width: { xs: '90%', md: '40%'}, 
+              height: '700px',
+              margin: { xs: '20px auto', md: '0 auto' },
+              borderRadius: 2,
+              border: '10px solid white',
+              boxShadow: 3,
+            }}
+          />
+
+          <Box
+            component="img"
+            src={inside}
+            alt="Descripción de la imagen"
+            sx={{
+              flex: 1,
+              width: { xs: '90%', md: '40%'}, 
+              height: '700px',
+              // margin: { xs: '0px auto', md: '0 auto' },
+              borderRadius: 2,
+              border: '10px solid white',
+              boxShadow: 3,
+            }}
+          />
+      </Box>
     </Box>
                              {/* Section - Get in Touch  */}
     <Box
@@ -204,7 +250,7 @@ const Landing = () => {
         justifyContent: 'center',
         gap: 4,
         padding: 4,
-        mt: 20,
+        mt: 10,
       }}
     >
      
@@ -254,10 +300,8 @@ const Landing = () => {
           variant="contained"
           onClick={() => alert('Submited !!!')}
           sx={{
-            mt: 4,
+            margin: { xs: '40px auto', md: '40px auto'},
             width: '80%',
-            mr: 'auto',
-            ml: 'auto',
             backgroundColor: '#e57390', 
             color: 'white',
             padding: '12px',
