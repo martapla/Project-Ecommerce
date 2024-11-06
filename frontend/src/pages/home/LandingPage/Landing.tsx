@@ -24,8 +24,8 @@ const Landing = () => {
       variant="h1"
       sx={{
         fontFamily: 'Kodchasan, sans-serif', 
-        fontSize:140,
         fontWeight: 700,
+        fontSize: { xs: '120px', md: '140px' }, 
         color: '#e00845',
         mb: 2,
         mt: 3
@@ -36,13 +36,16 @@ const Landing = () => {
 
     <Typography
         variant="h2"
+        width ="90%"
         sx={{
           fontFamily: 'Mandali, sans-serif', 
-          fontSize: 45,
+          //fontSize: 45,
+          fontSize: { xs: '40px', md: '45px' }, 
           fontWeight: 400,                   
           color: '#444444',
           textAlign: 'center',
-          mb: 6
+          mb: 6,
+          
         }}
       >
         Made to Measure Lingerie
@@ -67,7 +70,7 @@ const Landing = () => {
       variant="h2"
       sx={{
         fontFamily: 'Mandali, sans-serif', 
-        fontSize: 60,
+        fontSize: {xs: '50px', md: '60px'},
         fontWeight: 200,                   
         color: '#444444',
         textAlign: 'center',
@@ -133,9 +136,9 @@ const Landing = () => {
         alt="Descripción de la imagen"
         sx={{
           flex: 1,
-          width: '80%',
+          width: { xs: '90%', md: '80%' },
           height: '800px',
-          mb: { xs: '60px', md: '100px' },
+          mb: { xs: '80px', md: '100px' },
           borderRadius: 2,
           border: '10px solid white',
           boxShadow: 3,
@@ -158,7 +161,7 @@ const Landing = () => {
         variant="h2"
         sx={{
           fontFamily: 'Mandali, sans-serif',
-          fontSize: 60,
+          fontSize: {xs: '50px', md: '60px'},
           fontWeight: 200,
           color: '#444444',
           mb: 3,
@@ -208,6 +211,7 @@ const Landing = () => {
           alignItems: 'center', 
           justifyContent: 'center', 
           gap: 4, 
+          width: { xs: '100%', md: '95%'}, 
         }}
       >
           <Box
@@ -233,7 +237,6 @@ const Landing = () => {
               flex: 1,
               width: { xs: '90%', md: '40%'}, 
               height: '700px',
-              // margin: { xs: '0px auto', md: '0 auto' },
               borderRadius: 2,
               border: '10px solid white',
               boxShadow: 3,
@@ -248,7 +251,7 @@ const Landing = () => {
         display: 'flex',
         flexDirection: { xs: 'column', md: 'row' }, 
         justifyContent: 'center',
-        gap: 4,
+        gap: 8,
         padding: 4,
         mt: 10,
       }}
@@ -260,7 +263,7 @@ const Landing = () => {
           variant="h2"
           sx={{
             fontFamily: 'Mandali, sans-serif', 
-            fontSize: 60,
+            fontSize: {xs: '50px', md: '60px'},
             fontWeight: 200,                   
             color: '#444444',
             textAlign: 'left',
@@ -273,12 +276,13 @@ const Landing = () => {
         <TextField
           label="Your Email"
           variant="outlined"
-          placeholder="example@example.com"
+          placeholder="your email"
           fullWidth
           sx={{
             width: '100%',
             fontFamily: 'Mandali, sans-serif',
             fontSize: 18,
+            
           }}
         />
          <TextField
