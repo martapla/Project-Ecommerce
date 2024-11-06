@@ -39,7 +39,6 @@ const Landing = () => {
         width ="90%"
         sx={{
           fontFamily: 'Mandali, sans-serif', 
-          //fontSize: 45,
           fontSize: { xs: '40px', md: '45px' }, 
           fontWeight: 400,                   
           color: '#444444',

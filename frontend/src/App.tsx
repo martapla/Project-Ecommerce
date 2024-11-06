@@ -7,6 +7,7 @@ import Collection from './pages/collection/CollectionPage';
 import ShoppingBag from './pages/shoppingBag/ShoppingBagPage';
 import StyledButton from "./components/common/button/Button.style";
 import ButtonMui from "./components/common/button/Button"
+import Footer from "./components/footer/Footer";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
 
         <Route path="/shopping" element={<ShoppingBag />} />
       </Routes>
+      <Footer />
     </>
   )
 }

@@ -39,7 +39,7 @@ export default function DenseAppBar() {
                         '&:hover': { color: '#e00845'}
                       }}>
               <Link to="/shopping">
-                Shopping
+                Shop
               </Link>
           </Typography>
         </Toolbar>
