@@ -1,7 +1,8 @@
 
 import * as React from 'react';
 import { Box, Typography } from '@mui/material';
-import { red } from '@mui/material/colors';
+import ProductCard from './ProductCard';
+import vpink from '../../assets/images/vpink.jpeg'
 
 
 const CollectionPage = ()  => {
@@ -37,29 +38,54 @@ const CollectionPage = ()  => {
       >
         Lace Collection
     </Typography>
-    
-   <Box
+
+    <Typography
+      variant="h2"
+      sx={{
+        fontFamily: 'Mandali, sans-serif', 
+        fontSize: 20,
+        fontWeight: 300,                   
+        color:'#444444',
+        textAlign: 'left',
+        mb: 10,
+        ml: 10,
+        width:'80%'
+      }}
+    >
+        In the heart of our brand, there’s a gentle promise: to craft 
+        lingerie that whispers to the soul, as unique as each body it adorns. 
+        We believe in softness and strength, in the beauty of curves, edges, 
+        and all that lies in between. Each piece is sewn to your shape, a quiet 
+        celebration of who you are, stitched with care and kindness. Made to order, 
+        made to treasure, our lingerie honors the earth, leaving little behind but elegance. 
+        Here, you’re seen, cherished, embraced – wrapped in something made just for you, 
+        to wear like a second, truest skin.
+    </Typography>
+
+    <Box
       display="flex"
-      
       justifyContent="space-between"
       alignItems="center"
       sx={{
         width: '90%',
         height: '400px', 
-        margin:'0 auto',
+        margin:'40px 30px 60px 30px',
         gap: 2,          
         p: 2,  
-        border: '1px solid red' ,
         flexDirection: { xs: 'column', md: 'row' }, 
-          
       }}
-      
-    >
+      >
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+    </Box>
+    
+   {/* 
       {images.map((image, index) => (
         <Box
           key={index}
           component="img"
-          src={image.img}
+          src={vpink}
           alt={image.title}
           sx={{
             width:{ xs: '100%', md: '30%' },      
@@ -71,7 +97,7 @@ const CollectionPage = ()  => {
           }}
         />
       ))}
-    </Box>
+     */}
    
   </>
   );
@@ -79,18 +105,19 @@ const CollectionPage = ()  => {
 
 const images = [
   {
-    img: 'https://images.unsplash.com/photo-1551963831-b3b1ca40c98e',
-    title: 'Breakfast',
+    img: {vpink},
+    title: 'body',
   },
   {
-    img: 'https://images.unsplash.com/photo-1551782450-a2132b4ba21d',
-    title: 'Burger',
+    img: {vpink},
+    title: 'bra',
   },
   {
-    img: 'https://images.unsplash.com/photo-1522770179533-24471fcdba45',
-    title: 'Camera',
+    img: {vpink},
+    title: 'corset',
   },
   
 ];
+
 
  export default CollectionPage
