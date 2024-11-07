@@ -64,20 +64,19 @@ const CollectionPage = ()  => {
 
     <Box
       display="flex"
-      justifyContent="space-between"
+      justifyContent="center"
       alignItems="center"
       sx={{
-        width: '90%',
-        height: '400px', 
-        margin:'40px 30px 60px 30px',
-        gap: 2,          
-        p: 2,  
+        width: '100%',
+        margin: '0 auto',
+        // height: { xs: '1000px', md: '800px' }, 
+        gap: { xs: '4', md: '2' },     
         flexDirection: { xs: 'column', md: 'row' }, 
       }}
       >
         <ProductCard />
         <ProductCard />
-        <ProductCard />
+        
     </Box>
     
    {/* 

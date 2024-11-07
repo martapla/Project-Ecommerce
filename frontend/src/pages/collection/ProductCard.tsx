@@ -5,31 +5,46 @@ import vpink from '../../assets/images/vpink.jpeg'
   const ProductCard = () => {
 
   return (
-    <Card sx={{ maxWidth: 300, margin: 'auto', boxShadow: 3, borderRadius: 2 }}>
+    <Card sx={{ height:600,maxWidth: 500, boxShadow: 1, margin:1 }}>
       {/* Product Image */}
       <CardMedia
         component="img"
-        height="200"
+        height="200px"
         image={vpink} 
         alt="Product Image"
-        sx={{ borderRadius: '8px 8px 0 0' }}
+        sx={{ borderRadius: ' 0'}}
       />
       
       {/* Product Info */}
-      <CardContent sx={{ textAlign: 'center', padding: 2 }}>
+      <CardContent
+        sx={{
+          display: 'flex', // Use flex to align button to the right
+          flexDirection: 'column',
+          alignItems: 'flex-start',
+          padding: 2,
+          border:'1px red solid'
+        }}
+      >
         <Typography variant="h6" component="div" sx={{ fontFamily: 'Mandali, sans-serif', mb: 1 }}>
           Lace Body
         </Typography>
         <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
           230 €
         </Typography>
-        <Button 
-          variant="contained" 
-          color="primary" 
-          sx={{ backgroundColor: '#e00845', ':hover': { backgroundColor: '#c1073b' } }}
-        >
-          Order
-        </Button>
+
+        {/* Order Button */}
+        <Box sx={{ width: '100%', display: 'flex', justifyContent: 'flex-end'}}>
+          <Button
+            variant="contained"
+            color="primary"
+            sx={{
+              backgroundColor: '#e00845',
+              ':hover': { backgroundColor: '#c1073b' },
+            }}
+          >
+            Order
+          </Button>
+        </Box>
       </CardContent>
     </Card>
   );
