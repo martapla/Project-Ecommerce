@@ -5,7 +5,15 @@ import vpink from '../../assets/images/vpink.jpeg'
   const ProductCard = () => {
 
   return (
-    <Card sx={{ height:600,maxWidth: 500, boxShadow: 1, margin:1 }}>
+    
+    <Card 
+      sx={{ 
+        height: { sm: 500, md: 600 }, 
+        width: { xs: '80%', sm: 400, md: 500 }, 
+        boxShadow: 1, 
+        margin: 1,
+      }}
+    >
       {/* Product Image */}
       <CardMedia
         component="img"
@@ -18,33 +26,40 @@ import vpink from '../../assets/images/vpink.jpeg'
       {/* Product Info */}
       <CardContent
         sx={{
-          display: 'flex', // Use flex to align button to the right
-          flexDirection: 'column',
-          alignItems: 'flex-start',
+          display: 'flex', 
+          flexDirection: 'row',
+          alignItems: 'center', 
+          justifyContent: 'space-between', 
           padding: 2,
-          border:'1px red solid'
         }}
       >
+        {/* Product Details */}
+        <Box sx={{ display: 'flex', flexDirection: 'column' }}>
         <Typography variant="h6" component="div" sx={{ fontFamily: 'Mandali, sans-serif', mb: 1 }}>
           Lace Body
         </Typography>
         <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
           230 €
         </Typography>
+        </Box>
 
-        {/* Order Button */}
-        <Box sx={{ width: '100%', display: 'flex', justifyContent: 'flex-end'}}>
+        {/* Select Button */}
           <Button
             variant="contained"
             color="primary"
             sx={{
-              backgroundColor: '#e00845',
-              ':hover': { backgroundColor: '#c1073b' },
+              backgroundColor: 'white',
+              color: '#e00845',
+              border: '1px solid #e00845',
+              ':hover': {
+                backgroundColor: '#e00845',
+                color: 'white',
+              },
             }}
           >
-            Order
+            Select
           </Button>
-        </Box>
+        
       </CardContent>
     </Card>
   );

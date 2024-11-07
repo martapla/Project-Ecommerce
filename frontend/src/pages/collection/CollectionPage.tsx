@@ -2,8 +2,6 @@
 import * as React from 'react';
 import { Box, Typography } from '@mui/material';
 import ProductCard from './ProductCard';
-import vpink from '../../assets/images/vpink.jpeg'
-
 
 const CollectionPage = ()  => {
   return (
@@ -69,7 +67,6 @@ const CollectionPage = ()  => {
       sx={{
         width: '100%',
         margin: '0 auto',
-        // height: { xs: '1000px', md: '800px' }, 
         gap: { xs: '4', md: '2' },     
         flexDirection: { xs: 'column', md: 'row' }, 
       }}
@@ -77,46 +74,10 @@ const CollectionPage = ()  => {
         <ProductCard />
         <ProductCard />
         
-    </Box>
-    
-   {/* 
-      {images.map((image, index) => (
-        <Box
-          key={index}
-          component="img"
-          src={vpink}
-          alt={image.title}
-          sx={{
-            width:{ xs: '100%', md: '30%' },      
-            height: '300px',       
-            flex: 1,              
-            borderRadius: 2,      
-            margin: '0 5px',     
-            boxShadow: 3          
-          }}
-        />
-      ))}
-     */}
-   
+    </Box>   
   </>
   );
 }
-
-const images = [
-  {
-    img: {vpink},
-    title: 'body',
-  },
-  {
-    img: {vpink},
-    title: 'bra',
-  },
-  {
-    img: {vpink},
-    title: 'corset',
-  },
-  
-];
 
 
  export default CollectionPage
