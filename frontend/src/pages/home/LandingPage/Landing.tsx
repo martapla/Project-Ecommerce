@@ -1,5 +1,5 @@
 import React from 'react'
-import imageHero from '../../../assets/images/imageHero.jpg'
+import vred from '../../../assets/images/vred.jpeg'
 import vpink from '../../../assets/images/vpink.jpeg'
 import inside from '../../../assets/images/inside.jpeg'
 import pinklace from '../../../assets/images/pinklace.jpeg'
@@ -39,7 +39,7 @@ const Landing = () => {
         width ="90%"
         sx={{
           fontFamily: 'Mandali, sans-serif', 
-          fontSize: { xs: '40px', md: '45px' }, 
+          fontSize: { xs: '30px', md: '45px' }, 
           fontWeight: 400,                   
           color: '#444444',
           textAlign: 'center',
@@ -69,7 +69,7 @@ const Landing = () => {
       variant="h2"
       sx={{
         fontFamily: 'Mandali, sans-serif', 
-        fontSize: {xs: '50px', md: '60px'},
+        fontSize: {xs: '45px', md: '60px'},
         fontWeight: 200,                   
         color: '#444444',
         textAlign: 'center',
@@ -160,11 +160,10 @@ const Landing = () => {
         variant="h2"
         sx={{
           fontFamily: 'Mandali, sans-serif',
-          fontSize: {xs: '50px', md: '60px'},
+          fontSize: {xs: '45px', md: '60px'},
           fontWeight: 200,
           color: '#444444',
           mb: 3,
-          // mt: 6
         }}
       >
         Our Studio
@@ -262,7 +261,7 @@ const Landing = () => {
           variant="h2"
           sx={{
             fontFamily: 'Mandali, sans-serif', 
-            fontSize: {xs: '50px', md: '60px'},
+            fontSize: {xs: '45px', md: '60px'},
             fontWeight: 200,                   
             color: '#444444',
             textAlign: 'left',
@@ -324,7 +323,7 @@ const Landing = () => {
       <Box sx={{ flex: 1, display: 'flex', justifyContent: 'center' }}>
         <Box
           component="img"
-          src={imageHero}
+          src={vred}
           alt="redimage"
           sx={{
             width: '100%', 

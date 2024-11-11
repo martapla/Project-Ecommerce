@@ -1,8 +1,7 @@
 import React from 'react';
 import { Box, Card, CardMedia, CardContent, Typography, Button } from '@mui/material';
-import vpink from '../../assets/images/vpink.jpeg'
 
-  const ProductCard = () => {
+const ProductCard = ({ name, price, image }) => {
 
   return (
     
@@ -18,7 +17,7 @@ import vpink from '../../assets/images/vpink.jpeg'
       <CardMedia
         component="img"
         height="200px"
-        image={vpink} 
+        image={image} 
         alt="Product Image"
         sx={{ borderRadius: ' 0'}}
       />
@@ -36,10 +35,10 @@ import vpink from '../../assets/images/vpink.jpeg'
         {/* Product Details */}
         <Box sx={{ display: 'flex', flexDirection: 'column' }}>
         <Typography variant="h6" component="div" sx={{ fontFamily: 'Mandali, sans-serif', mb: 1 }}>
-          Lace Body
+        {name}
         </Typography>
         <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
-          230 €
+        {price} €
         </Typography>
         </Box>
 

@@ -20,7 +20,7 @@ const Footer = () => {
     <Typography variant="body1" color="textSecondary" 
                 sx={{ fontFamily: 'Mandali, sans-serif' ,fontSize:'20px' , 
                 fontWeight: 400, }}>
-      © {new Date().getFullYear()}  Mïnim Studio. All rights reserved.
+      © {new Date().getFullYear()}  Minïm Studio. All rights reserved.
     </Typography>
     
     <Box sx={{ display: 'flex', justifyContent: 'center', mt: 2 }}>
