@@ -1,11 +1,28 @@
 
-import * as React from 'react';
-import { Box, Typography } from '@mui/material';
+import  React,{ useState } from 'react';
+import { Box, Typography, Button } from '@mui/material';
 import CollectionSection from './CollectionSection';
+import ShoppingBag from '../shoppingBag/ShoppingBagPage';
+import { useNavigate } from 'react-router-dom';
 import vpink from '../../assets/images/vpink.jpeg'
 import vred from '../../assets/images/vred.jpeg'
 
 const CollectionPage = ()  => {
+
+  const [selectedProducts, setSelectedProducts] = useState([]);
+  const navigate = useNavigate();
+  
+    // Función para añadir productos al shopping bag
+    const handleSelectProduct = (product) => {
+      setSelectedProducts((prevSelectedProducts) => [...prevSelectedProducts, product]);
+    };
+
+    // Función para eliminar productos del carrito
+  const handleDeselectProduct = (product) => {
+    setSelectedProducts((prevSelectedProducts) => 
+      prevSelectedProducts.filter((p) => p.name !== product.name)
+    );
+  };
 
   const collections = [
     {
@@ -35,6 +52,11 @@ const CollectionPage = ()  => {
     },
   ];
 
+  const goToShoppingBag = () => {
+     console.log("Selected Products: ", selectedProducts);
+     navigate('/shopping', { state: { selectedProducts } });
+  };
+
   return (
     <>
     
@@ -59,8 +81,21 @@ const CollectionPage = ()  => {
           title={collection.title}
           description={collection.description}
           products={collection.products}
+          onSelectProduct={handleSelectProduct}
+          onDeselectProduct={handleDeselectProduct}
         />
       ))}
+
+    <Button
+        variant="contained"
+        color="primary"
+        sx={{ mt: 4, display: 'block', margin: '0 auto' }}
+        onClick={goToShoppingBag}
+      >
+        View Shopping Bag
+    </Button>
+
+      {/* <ShoppingBag selectedProducts={selectedProducts} /> */}
 
             {/* Content box text and image
     <Box

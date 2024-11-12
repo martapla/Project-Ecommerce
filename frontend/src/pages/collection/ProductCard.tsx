@@ -1,7 +1,21 @@
-import React from 'react';
+import React, { useState }  from 'react';
 import { Box, Card, CardMedia, CardContent, Typography, Button } from '@mui/material';
 
-const ProductCard = ({ name, price, image }) => {
+const ProductCard = ({ name, price, image, onSelect, onDeselect }) => {
+
+  const [isSelected, setIsSelected] = useState(false);
+
+  const handleSelectClick = () => {
+    if (isSelected) {
+      // Si ya está seleccionado, lo deselecciona
+      setIsSelected(false);
+      onDeselect({ name, price, image }); // Llama a la función para eliminar del carrito
+    } else {
+      // Si no está seleccionado, lo selecciona
+      setIsSelected(true);
+      onSelect({ name, price, image }); // Llama a la función para agregar al carrito
+    }
+  };
 
   return (
     
@@ -46,9 +60,10 @@ const ProductCard = ({ name, price, image }) => {
           <Button
             variant="contained"
             color="primary"
+            onClick={handleSelectClick}
             sx={{
-              backgroundColor: 'white',
-              color: '#e00845',
+              backgroundColor: isSelected ? '#e00845' : 'white',
+              color: isSelected ? 'white' : '#e00845',
               border: '1px solid #e00845',
               ':hover': {
                 backgroundColor: '#e00845',
@@ -56,7 +71,7 @@ const ProductCard = ({ name, price, image }) => {
               },
             }}
           >
-            Select
+             {isSelected ? 'Selected' : 'Select'}
           </Button>
         
       </CardContent>

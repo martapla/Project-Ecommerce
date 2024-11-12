@@ -3,7 +3,7 @@ import React from 'react';
 import { Box, Typography } from '@mui/material';
 import ProductCard from './ProductCard';
 
-const CollectionSection = ({ title, description, products }) => {
+const CollectionSection = ({ title, description, products, onSelectProduct,onDeselectProduct }) => {
   return (
     <Box
       sx={{
@@ -68,7 +68,14 @@ const CollectionSection = ({ title, description, products }) => {
         }}
       >
         {products.map((product, index) => (
-          <ProductCard key={index} name={product.name} price={product.price} image={product.image} />
+          <ProductCard 
+            key={index} 
+            name={product.name} 
+            price={product.price} 
+            image={product.image} 
+            onSelect={onSelectProduct}  
+            onDeselect={onDeselectProduct}
+            />
         ))}
       </Box>
     </Box>
