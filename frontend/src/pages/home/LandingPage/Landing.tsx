@@ -34,7 +34,8 @@ const Landing = () => {
       MINÏM
     </Typography>
 
-    <Typography
+
+     <Typography
         variant="h2"
         width ="90%"
         sx={{
@@ -48,7 +49,7 @@ const Landing = () => {
         }}
       >
         Made to Measure Lingerie
-    </Typography>
+    </Typography> 
                             {/* Main Image */}
     <Box
       component="img"

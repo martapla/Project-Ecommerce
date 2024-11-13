@@ -1,23 +1,25 @@
 
 import  React,{ useState } from 'react';
-import { Box, Typography, Button } from '@mui/material';
+import { Typography, Button } from '@mui/material';
 import CollectionSection from './CollectionSection';
-import ShoppingBag from '../shoppingBag/ShoppingBagPage';
 import { useNavigate } from 'react-router-dom';
 import vpink from '../../assets/images/vpink.jpeg'
 import vred from '../../assets/images/vred.jpeg'
+import redbra from '../../assets/images/redbra.jpeg'
+import blackcat from '../../assets/images/blackcat.jpeg'
+import blacklook from '../../assets/images/blacklook.jpeg'
 
 const CollectionPage = ()  => {
 
   const [selectedProducts, setSelectedProducts] = useState([]);
   const navigate = useNavigate();
   
-    // Función para añadir productos al shopping bag
+    // Add products
     const handleSelectProduct = (product) => {
       setSelectedProducts((prevSelectedProducts) => [...prevSelectedProducts, product]);
     };
 
-    // Función para eliminar productos del carrito
+    // Remove products
   const handleDeselectProduct = (product) => {
     setSelectedProducts((prevSelectedProducts) => 
       prevSelectedProducts.filter((p) => p.name !== product.name)
@@ -26,28 +28,42 @@ const CollectionPage = ()  => {
 
   const collections = [
     {
-      title: 'White Lace',
-      description: `In the heart of our brand, there’s a gentle promise: to craft 
-                    lingerie that whispers to the soul, as unique as each body it adorns...`,
+      title: 'Hidden Silk',
+      description: `Soft whispers of a bygone era. Each piece is handcrafted, 
+      draping your skin in timeless luxury. 
+      Inspired by the romance of vintage glamour,evoke the grace and allure of delicate 
+      silhouettes. Dance in harmony, crafted to embrace your form like a cherished secret. 
+      Slip into a world where comfort becomes allure,and every detail is a quiet ode to femininity. 
+      Wrap yourself in the magic of silk, made uniquely for you.`,
       products: [
-        { name: 'Lace Body', price: '230', image: vpink },
-        { name: 'Red Print', price: '120', image: vred },
+        { name: 'Silk Bra', price: '230', image: vpink },
+        { name: 'Silk V', price: '120', image: vred },
       ],
     },
     {
       title: 'Black Stars',
-      description: `This collection brings you the elegance and style you deserve...`,
+      description: `A collection crafted from the finest black and delicate net, 
+      woven to evoke the mystery of a starlit night. Each piece shimmers with a hint of allure, 
+      like constellations against velvet skies, designed to embrace the body with elegance and 
+      a touch of boldness. Intricate lacework meets soft, sheer panels, creating a play of light 
+      and shadow that captures the eye and sparks the imagination. 
+      Slip into Black Stars and let each piece envelop you in the magic of midnight.`,
       products: [
-        { name: 'Blue Silk', price: '150', image: vpink },
-        { name: 'Green Velvet', price: '180', image: vred },
+        { name: 'Black Corset', price: '150', image: blackcat },
+        { name: 'Black Set', price: '180', image: blacklook },
       ],
     },
     {
       title: 'Red Oriental',
-      description: `Explore our classic pieces that offer timeless beauty and comfort...`,
+      description: `Here comes the beauty of orient gardens, with timeless smells. 
+      Each piece is crafted from a soft, elastic fabric adorned with delicate floral motifs 
+      that evoke the grace of traditional oriental nature. Designed with a vintage flair, 
+      the rich red hues and intricate patterns embrace the body with comfort and charm. 
+      Like a blossom in full bloom, Red Oriental brings warmth, grace, and a touch of romance 
+      to your every moment.`,
       products: [
-        { name: 'Classic Lace', price: '210', image: vpink },
-        { name: 'Silk Touch', price: '170', image: vred },
+        { name: 'Oriental Bra', price: '210', image: redbra },
+        { name: 'Oriental V', price: '170', image: vred },
       ],
     },
   ];
@@ -66,10 +82,16 @@ const CollectionPage = ()  => {
         fontFamily: 'Mandali, sans-serif', 
         fontSize: 60,
         fontWeight: 200,                   
-        color: '#e00845',
+        // color: '#e00845',
+        color: 'white',
+        textShadow: '2px 2px 8px rgba(224, 8, 69, 0.4)',
         textAlign: 'center',
-        mt:8,
-        mb:2
+        mt:1,
+        mb:2,
+        pb:1,
+        borderBottom: '9px white solid',
+        borderTop: '4px white solid',
+        backgroundColor:'#f9d7e4; '
       }}
     >
       Collections

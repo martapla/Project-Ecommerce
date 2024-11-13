@@ -11,7 +11,6 @@ const CollectionSection = ({ title, description, products, onSelectProduct,onDes
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        border: '1px red solid',
         mb: 6,
       }}
     >
@@ -22,7 +21,6 @@ const CollectionSection = ({ title, description, products, onSelectProduct,onDes
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          border: '1px green solid',
         }}
       >
         <Typography
