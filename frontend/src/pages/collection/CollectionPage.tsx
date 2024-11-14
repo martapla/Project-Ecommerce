@@ -37,7 +37,7 @@ const CollectionPage = ()  => {
       Wrap yourself in the magic of silk, made uniquely for you.`,
       products: [
         { name: 'Silk Bra', price: '230', image: vpink },
-        { name: 'Silk V', price: '120', image: vred },
+        { name: 'Silk V', price: '120', image: vpink },
       ],
     },
     {
@@ -82,7 +82,6 @@ const CollectionPage = ()  => {
         fontFamily: 'Mandali, sans-serif', 
         fontSize: 60,
         fontWeight: 200,                   
-        // color: '#e00845',
         color: 'white',
         textShadow: '2px 2px 8px rgba(224, 8, 69, 0.4)',
         textAlign: 'center',
@@ -108,91 +107,43 @@ const CollectionPage = ()  => {
         />
       ))}
 
-    <Button
+    {/* <Button
         variant="contained"
         color="primary"
         sx={{ mt: 4, display: 'block', margin: '0 auto' }}
         onClick={goToShoppingBag}
       >
         View Shopping Bag
+    </Button> */}
+    <Button
+      variant="contained"
+      onClick={goToShoppingBag}
+      sx={{
+        backgroundColor: 'white',       
+        color: '#e57390',               
+        border: '1px solid #e57390',    
+        padding: '28px',          
+        fontSize: '20px',               
+        borderRadius: '50%',             
+        fontFamily: 'Mandali, sans-serif', 
+        fontWeight: 300,
+        textTransform: 'none',          
+        boxShadow: '-10px 0px 0px #e57390', 
+        transition: 'all 0.3s ease-in-out',
+        '&:hover': {
+          backgroundColor: 'white', 
+          color:  '#e57390',               
+          borderColor:  '#e57390',          
+          boxShadow: '10px 0px 0px #e57390',   
+        },
+        mb: { xs: '60px', md: '100px' }, 
+        display: 'block', margin: '0 auto'                    
+      }}
+    >
+      Go to Shop
     </Button>
 
-      {/* <ShoppingBag selectedProducts={selectedProducts} /> */}
 
-            {/* Content box text and image
-    <Box
-    sx={{
-      flex: 1,
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems:'center',
-      border: '1px red solid'
-    }}
-    >
-               Box for text
-      <Box
-        sx={{
-          flex: 1,
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems:'center',
-          border: '1px green solid'
-        }}
-        >
-            <Typography
-                variant="h2"
-                sx={{
-                  fontFamily: 'Mandali, sans-serif', 
-                  fontSize: 40,
-                  fontWeight: 200,                   
-                  color: '#444444',
-                  textAlign: 'left',
-                  mb: 4,
-                  mt:8
-                }}
-              >
-                Lace Collection
-            </Typography>
-
-            <Typography
-              variant="h2"
-              sx={{
-                fontFamily: 'Mandali, sans-serif', 
-                fontSize: 20,
-                fontWeight: 300,                   
-                color:'#444444',
-                textAlign: 'left',
-                mb: 6,
-                width:'80%'
-              }}
-            >
-                In the heart of our brand, there’s a gentle promise: to craft 
-                lingerie that whispers to the soul, as unique as each body it adorns. 
-                We believe in softness and strength, in the beauty of curves, edges, 
-                and all that lies in between. Each piece is sewn to your shape, a quiet 
-                celebration of who you are, stitched with care and kindness. Made to order, 
-                made to treasure, our lingerie honors the earth, leaving little behind but elegance. 
-                Here, you’re seen, cherished, embraced – wrapped in something made just for you, 
-                to wear like a second, truest skin.
-            </Typography>
-        </Box>
-                         Images Box
-        <Box
-          display="flex"
-          justifyContent="center"
-          alignItems="center"
-          sx={{
-            width: { xs: '100%', md: '90%' }, 
-            margin: '0 auto',
-            gap: { xs: '4', md: '2' },     
-            flexDirection: { xs: 'column', md: 'row' }, 
-          }}
-          >
-            <ProductCard name="Lace Body" price="230" image={vpink}/>
-            <ProductCard name="Red Print" price="120" image={vred}/>
-                        
-        </Box>   
-    </Box> */}
   </>
   );
 }
