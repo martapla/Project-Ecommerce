@@ -9,11 +9,11 @@ const ProductCard = ({ name, price, image, onSelect, onDeselect }) => {
     if (isSelected) {
       // Si ya está seleccionado, lo deselecciona
       setIsSelected(false);
-      onDeselect({ name, price, image }); // Llama a la función para eliminar del carrito
+      onDeselect({ name, price, image }); 
     } else {
       // Si no está seleccionado, lo selecciona
       setIsSelected(true);
-      onSelect({ name, price, image }); // Llama a la función para agregar al carrito
+      onSelect({ name, price, image }); 
     }
   };
 

@@ -107,14 +107,6 @@ const CollectionPage = ()  => {
         />
       ))}
 
-    {/* <Button
-        variant="contained"
-        color="primary"
-        sx={{ mt: 4, display: 'block', margin: '0 auto' }}
-        onClick={goToShoppingBag}
-      >
-        View Shopping Bag
-    </Button> */}
     <Button
       variant="contained"
       onClick={goToShoppingBag}
