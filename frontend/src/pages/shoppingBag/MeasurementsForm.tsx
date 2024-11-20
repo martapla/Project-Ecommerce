@@ -30,6 +30,7 @@ const MeasurementsForm = () => {
         display: 'flex',
         flexDirection: 'column',
         maxWidth: 400,
+        width: 300,
         margin: 'auto',
         gap: 2,
         padding: 3,
@@ -39,8 +40,8 @@ const MeasurementsForm = () => {
       }}
       onSubmit={handleSubmit}
     >
-      <Typography variant="h4" sx={{ textAlign: 'center', mb: 2 }}>
-        Measurements
+      <Typography variant="h6" sx={{  fontFamily: 'Mandali, sans-serif', textAlign: 'center', mb: 2 }}>
+         Your Measurements
       </Typography>
       
       <TextField
@@ -82,7 +83,7 @@ const MeasurementsForm = () => {
           },
         }}
       >
-        Register
+        Submit
       </Button>
     </Box>
   );

@@ -3,11 +3,16 @@ import { useLocation } from 'react-router-dom';
 import { Box, Typography } from '@mui/material';
 import MeasurementsForm from './MeasurementsForm'
 import { ShoppingBagContext } from "../../context/ShoppingBagContext";
+import DeleteIcon from '@mui/icons-material/Delete';
 
 const ShoppingBagPage = () => {
-  const { selectedProducts } = useContext(ShoppingBagContext);
+  const { selectedProducts, removeProduct } = useContext(ShoppingBagContext);
   // const location = useLocation();  
   // const { selectedProducts } = location.state || { selectedProducts: [] };  
+
+  const handleRemoveProduct = (product) => {
+    removeProduct(product);
+  }; 
 
   return (
     <>
@@ -35,29 +40,47 @@ const ShoppingBagPage = () => {
         sx={{
           display: 'flex',
           flexDirection: { xs: 'column', md: 'row' }, 
-          padding: 3,
+          padding: 6,
+          // border:1,
+          justifyContent: 'space-around',
         }}
       >
         {/* Products */}
-        <Box sx={{ flex: 1 }}>
+        <Box sx={{  width: 300, margin: 'auto', flex: 0.5, border:3, borderRadius:1, borderColor: 'white',}}>
 
           {selectedProducts.length === 0 ? (
-            <Typography sx={{ marginTop: 2 }}>Your shopping bag is empty.</Typography>
+            <Typography sx={{ margin: 2, textAlign:'center'}}>Your shopping bag is empty.</Typography>
           ) : (
-            <Box sx={{ marginTop: 2 }}>
+            <Box sx={{ padding:2 }}>
               {selectedProducts.map((product, index) => (
-                <Box key={index} sx={{ display: 'flex', alignItems: 'center', marginBottom: 2 }}>
-                  <img src={product.image} alt={product.name} style={{ width: 50, height: 50, marginRight: 10 }} />
+
+                <Box key={index} sx={{ display: 'flex', alignItems: 'center', borderBottom: 2, borderColor:'white',padding:2 }}>
+                  <img src={product.image} alt={product.name} style={{ width: 80, height: 80, marginRight: 10 }} />
                   <Typography sx={{ flex: 1 }}>
                     {product.name} - {product.price} €
                   </Typography>
+
+                  <button 
+                    onClick={() => handleRemoveProduct(product)} 
+                    style={{ 
+                      border: 'none', 
+                      background: 'none', 
+                      cursor: 'pointer', 
+                      display: 'flex', 
+                      alignItems: 'center' 
+                    }}
+                  >
+                    <DeleteIcon style={{ color: 'grey', fontSize: '20px' }} />
+                  </button>
+
                 </Box>
               ))}
+               
             </Box>
           )}
         </Box>
 
-        <Box sx={{ flex: 1 }}>
+        <Box sx={{ flex: 0.5, mt:4 }}>
            <MeasurementsForm/>
         </Box>
 
