@@ -40,13 +40,24 @@ const ShoppingBagPage = () => {
         sx={{
           display: 'flex',
           flexDirection: { xs: 'column', md: 'row' }, 
-          padding: 6,
-          // border:1,
-          justifyContent: 'space-around',
+          justifyContent: 'center', 
+          alignItems: 'center', 
+          padding: { xs: 2, md: 4 },
+          margin: '0 auto',
+          width: '100%',
+          boxSizing: 'border-box',
         }}
       >
+
         {/* Products */}
-        <Box sx={{  width: 300, margin: 'auto', flex: 0.5, border:3, borderRadius:1, borderColor: 'white',}}>
+        <Box 
+        sx={{
+          flex: 1,
+          width: { xs: '100%', sm: '70%', md: '45%' },
+          boxSizing: 'border-box',
+          border:3, borderRadius:1, borderColor: 'white'
+        }}
+        >
 
           {selectedProducts.length === 0 ? (
             <Typography sx={{ margin: 2, textAlign:'center'}}>Your shopping bag is empty.</Typography>
@@ -54,7 +65,7 @@ const ShoppingBagPage = () => {
             <Box sx={{ padding:2 }}>
               {selectedProducts.map((product, index) => (
 
-                <Box key={index} sx={{ display: 'flex', alignItems: 'center', borderBottom: 2, borderColor:'white',padding:2 }}>
+                <Box key={index} sx={{ display: 'flex', alignItems: 'center', borderBottom: 2, borderColor:'white',paddingTop:1,paddingBottom:1 }}>
                   <img src={product.image} alt={product.name} style={{ width: 80, height: 80, marginRight: 10 }} />
                   <Typography sx={{ flex: 1 }}>
                     {product.name} - {product.price} €
@@ -80,7 +91,15 @@ const ShoppingBagPage = () => {
           )}
         </Box>
 
-        <Box sx={{ flex: 0.5, mt:4 }}>
+        <Box 
+        
+        sx={{
+          flex: 1,
+          padding: 2,
+          width: { xs: '100%', sm: '90%', md: '45%' },
+          boxSizing: 'border-box',
+        }}
+        >
            <MeasurementsForm/>
         </Box>
 

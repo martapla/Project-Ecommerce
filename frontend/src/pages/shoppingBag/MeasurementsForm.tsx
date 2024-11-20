@@ -1,26 +1,24 @@
-// BodyMeasurementsForm.js
 import React, { useState } from 'react';
 import { TextField, Button, Box, Typography } from '@mui/material';
 
 const MeasurementsForm = () => {
-  // Estado para almacenar las medidas del formulario
+  
   const [measurements, setMeasurements] = useState({
     chest: '',
     waist: '',
     hips: '',
   });
 
-  // Maneja cambios en los campos de entrada
+  
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setMeasurements({ ...measurements, [name]: value });
   };
 
-  // Maneja el envío del formulario
+  
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Measurements:", measurements);
-    // Aquí puedes añadir la lógica para enviar los datos a un servidor o realizar otra acción
+    
   };
 
   return (
