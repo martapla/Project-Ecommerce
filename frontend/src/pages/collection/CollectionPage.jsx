@@ -1,5 +1,5 @@
 
-import  React,{ useState } from 'react';
+import  React,{ useState, useContext } from 'react';
 import { Typography, Button } from '@mui/material';
 import CollectionSection from './CollectionSection';
 import { useNavigate } from 'react-router-dom';
@@ -8,23 +8,25 @@ import vred from '../../assets/images/vred.jpeg'
 import redbra from '../../assets/images/redbra.jpeg'
 import blackcat from '../../assets/images/blackcat.jpeg'
 import blacklook from '../../assets/images/blacklook.jpeg'
+import { ShoppingBagContext } from "../../context/ShoppingBagContext";
 
 const CollectionPage = ()  => {
 
-  const [selectedProducts, setSelectedProducts] = useState([]);
+  // const [selectedProducts, setSelectedProducts] = useState([]);
   const navigate = useNavigate();
+  const { addProduct, removeProduct } = useContext(ShoppingBagContext);
   
     // Add products
-    const handleSelectProduct = (product) => {
-      setSelectedProducts((prevSelectedProducts) => [...prevSelectedProducts, product]);
-    };
+    // const handleSelectProduct = (product) => {
+    //   setSelectedProducts((prevSelectedProducts) => [...prevSelectedProducts, product]);
+    // };
 
     // Remove products
-  const handleDeselectProduct = (product) => {
-    setSelectedProducts((prevSelectedProducts) => 
-      prevSelectedProducts.filter((p) => p.name !== product.name)
-    );
-  };
+  // const handleDeselectProduct = (product) => {
+  //   setSelectedProducts((prevSelectedProducts) => 
+  //     prevSelectedProducts.filter((p) => p.name !== product.name)
+  //   );
+  // };
 
   const collections = [
     {
@@ -69,8 +71,8 @@ const CollectionPage = ()  => {
   ];
 
   const goToShoppingBag = () => {
-     console.log("Selected Products: ", selectedProducts);
-     navigate('/shopping', { state: { selectedProducts } });
+    navigate("/shopping");
+    //  navigate('/shopping', { state: { selectedProducts } });
   };
 
   return (
@@ -102,8 +104,10 @@ const CollectionPage = ()  => {
           title={collection.title}
           description={collection.description}
           products={collection.products}
-          onSelectProduct={handleSelectProduct}
-          onDeselectProduct={handleDeselectProduct}
+          onSelectProduct={addProduct}
+          onDeselectProduct={removeProduct}
+          // onSelectProduct={handleSelectProduct}
+          // onDeselectProduct={handleDeselectProduct}
         />
       ))}
 

@@ -1,13 +1,13 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import { useLocation } from 'react-router-dom';
 import { Box, Typography } from '@mui/material';
-import MeasurementsForm from '../shoppingBag/MeasurementsForm'
+import MeasurementsForm from './MeasurementsForm'
+import { ShoppingBagContext } from "../../context/ShoppingBagContext";
 
 const ShoppingBagPage = () => {
-  const location = useLocation();  // Usamos useLocation para acceder al state
-
-  console.log("Location State:", location.state); 
-  const { selectedProducts } = location.state || { selectedProducts: [] };  // Obtenemos los productos seleccionados
+  const { selectedProducts } = useContext(ShoppingBagContext);
+  // const location = useLocation();  
+  // const { selectedProducts } = location.state || { selectedProducts: [] };  
 
   return (
     <>
