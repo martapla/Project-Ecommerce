@@ -1,4 +1,3 @@
-// CollectionSection.js
 import React from 'react';
 import { Box, Typography } from '@mui/material';
 import ProductCard from './ProductCard';
@@ -12,6 +11,7 @@ const CollectionSection = ({ title, description, products, onSelectProduct,onDes
         flexDirection: 'column',
         alignItems: 'center',
         mb: 6,
+         
       }}
     >
       {/* Box for text */}
@@ -21,6 +21,7 @@ const CollectionSection = ({ title, description, products, onSelectProduct,onDes
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
+          
         }}
       >
         <Typography
@@ -29,10 +30,10 @@ const CollectionSection = ({ title, description, products, onSelectProduct,onDes
             fontFamily: 'Mandali, sans-serif',
             fontSize: 40,
             fontWeight: 200,
-            color: '#444444',
+            color:'#e57390',
             textAlign: 'left',
             mb: 4,
-            mt: 8,
+            mt: { xs: '40px', sm: '60px' }, 
           }}
         >
           {title}
@@ -42,7 +43,7 @@ const CollectionSection = ({ title, description, products, onSelectProduct,onDes
           variant="h2"
           sx={{
             fontFamily: 'Mandali, sans-serif',
-            fontSize: 20,
+            fontSize: { xs: '18px', sm: '20px' },
             fontWeight: 300,
             color: '#444444',
             textAlign: 'left',

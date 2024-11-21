@@ -28,7 +28,6 @@ const MeasurementsForm = () => {
         display: 'flex',
         flexDirection: 'column',
         maxWidth: 400,
-        width: 300,
         margin: 'auto',
         gap: 2,
         padding: 3,
@@ -73,7 +72,7 @@ const MeasurementsForm = () => {
         type="submit"
         variant="contained"
         sx={{
-          backgroundColor: '#f9d7e4',
+          backgroundColor: '#e57390',
           color: 'white',
           ':hover': {
             backgroundColor: '#e6b8c8',

@@ -25,7 +25,7 @@ const Landing = () => {
       sx={{
         fontFamily: 'Kodchasan, sans-serif', 
         fontWeight: 700,
-        fontSize: { xs: '120px', md: '140px' }, 
+        fontSize: { xs: '90px', sm: '140px' }, 
         color: '#e00845',
         mb: 2,
         mt: 3
@@ -40,7 +40,7 @@ const Landing = () => {
         width ="90%"
         sx={{
           fontFamily: 'Mandali, sans-serif', 
-          fontSize: { xs: '30px', md: '45px' }, 
+          fontSize: { xs: '26px', sm: '45px' }, 
           fontWeight: 400,                   
           color: '#444444',
           textAlign: 'center',
@@ -70,12 +70,12 @@ const Landing = () => {
       variant="h2"
       sx={{
         fontFamily: 'Mandali, sans-serif', 
-        fontSize: {xs: '45px', md: '60px'},
+        fontSize: { xs: '40px', sm: '56px' }, 
         fontWeight: 200,                   
         color: '#444444',
         textAlign: 'center',
-        mt:8,
-        mb:3
+        mt: { xs: '10px', sm: '60px' }, 
+        padding:{ xs: 3 }, 
       }}
     >
       Brand Philosophy
@@ -85,7 +85,7 @@ const Landing = () => {
       variant="h2"
       sx={{
         fontFamily: 'Mandali, sans-serif', 
-        fontSize: 20,
+        fontSize: { xs: '18px', sm: '20px' },
         fontWeight: 300,                   
         color:'#444444',
         textAlign: 'center',
@@ -138,7 +138,7 @@ const Landing = () => {
           flex: 1,
           width: { xs: '90%', md: '80%' },
           height: '800px',
-          mb: { xs: '80px', md: '100px' },
+          // mb: { xs: '0px', md: '100px' },
           borderRadius: 2,
           border: '10px solid white',
           boxShadow: 3,
@@ -161,10 +161,12 @@ const Landing = () => {
         variant="h2"
         sx={{
           fontFamily: 'Mandali, sans-serif',
-          fontSize: {xs: '45px', md: '60px'},
+          fontSize: {xs: '40px', sm: '56px'},
           fontWeight: 200,
           color: '#444444',
           mb: 3,
+          mt: { xs: '50px', sm: '60px' }, 
+          
         }}
       >
         Our Studio
@@ -174,7 +176,7 @@ const Landing = () => {
         variant="body1"
         sx={{
           fontFamily: 'Mandali, sans-serif',
-          fontSize: 20,
+          fontSize: { xs: '18px', sm: '20px' },
           fontWeight: 300,
           color: '#444444',
           mb: 4,
@@ -190,10 +192,10 @@ const Landing = () => {
         variant="body1"
         sx={{
           fontFamily: 'Mandali, sans-serif',
-          fontSize: 20,
+          fontSize: { xs: '18px', sm: '20px' },
           fontWeight: 300,
           color: '#444444',
-          mb: 8,
+          mb: 4,
           width: '80%'
         }}
       >

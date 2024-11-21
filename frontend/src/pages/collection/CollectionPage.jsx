@@ -77,26 +77,6 @@ const CollectionPage = ()  => {
 
   return (
     <>
-    
-    <Typography
-      variant="h2"
-      sx={{
-        fontFamily: 'Mandali, sans-serif', 
-        fontSize: 60,
-        fontWeight: 200,                   
-        color: 'white',
-        textShadow: '2px 2px 8px rgba(224, 8, 69, 0.4)',
-        textAlign: 'center',
-        mt:1,
-        mb:2,
-        pb:1,
-        borderBottom: '9px white solid',
-        borderTop: '4px white solid',
-        backgroundColor:'#f9d7e4; '
-      }}
-    >
-      Collections
-    </Typography>
 
     {collections.map((collection, index) => (
         <CollectionSection
