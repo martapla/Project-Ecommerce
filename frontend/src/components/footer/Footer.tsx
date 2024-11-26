@@ -12,26 +12,32 @@ const Footer = () => {
     component="footer"
     sx={{
       backgroundColor: '#f8e9ef', 
-      padding: 4, 
+      padding:{ xs: 1, md: 2 }, 
       textAlign: 'center',
-      mt: 8, 
+      mt: 'auto',
+      width: '100%',       
     }}
   >
     <Typography variant="body1" color="textSecondary" 
-                sx={{ fontFamily: 'Mandali, sans-serif' ,fontSize:'20px' , 
-                fontWeight: 400, }}>
+                sx={{ fontFamily: 'Mandali, sans-serif',
+                      fontSize:{ xs: '16px', md: '18px' }, 
+                      fontWeight: 400, }}>
       © {new Date().getFullYear()}  Minïm Studio. All rights reserved.
     </Typography>
     
-    <Box sx={{ display: 'flex', justifyContent: 'center', mt: 2 }}>
+    <Box sx={{ display: 'flex', 
+               justifyContent: 'center', 
+               mt: 1,
+               gap: 1,
+       }}>
       <IconButton href="https://facebook.com" target="_blank" color="inherit">
-        <FacebookIcon />
+        <FacebookIcon fontSize="small"/>
       </IconButton>
       <IconButton href="https://twitter.com" target="_blank" color="inherit">
-        <TwitterIcon />
+        <TwitterIcon fontSize="small"/>
       </IconButton>
       <IconButton href="https://instagram.com" target="_blank" color="inherit">
-        <InstagramIcon />
+        <InstagramIcon fontSize="small"/>
       </IconButton>
     </Box>
   </Box>

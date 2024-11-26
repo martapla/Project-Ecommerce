@@ -9,7 +9,7 @@ import { ShoppingBagProvider } from "./context/ShoppingBagContext";
 
 function App() {
   return (
-    <>
+  
     <ShoppingBagProvider>
       <Navbar />
       <Routes>
@@ -21,7 +21,7 @@ function App() {
       </Routes>
       <Footer />
     </ShoppingBagProvider>
-    </>
+    
   )
 }
 

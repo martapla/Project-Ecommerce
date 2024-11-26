@@ -25,7 +25,7 @@ const ShoppingBagPage = () => {
           padding: { xs: 2, md: 4 },
           margin: '0 auto',
           width: '100%',
-          boxSizing: 'border-box',
+          minHeight: 'calc(100vh - 64px - 100px)', 
         }}
       >
 
@@ -82,7 +82,7 @@ const ShoppingBagPage = () => {
         >
            <MeasurementsForm/>
         </Box>
-
+        
       </Box>
     </>
   );

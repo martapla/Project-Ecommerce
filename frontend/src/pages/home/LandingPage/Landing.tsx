@@ -57,12 +57,12 @@ const Landing = () => {
       alt="Descripción de la imagen"
       sx={{
         width: '90%',
-        height: '700px',
+        height: 'auto',
         margin: '0 auto',    
         borderRadius: 2, 
         border: '10px solid white',  
         boxShadow: 3,
-        objectFit: 'cover',
+        objectFit: 'contain',
         opacity: 0.9
       }} />
                              {/* Section - Brand Philosophy */}
@@ -203,7 +203,7 @@ const Landing = () => {
         By prioritizing sustainability, we create pieces that are not only stunning but also mindful of our impact on the world.
       </Typography>
 
-
+                                    {/* 2 Images Box */}
       <Box
         sx={{
           display: 'flex',
@@ -215,34 +215,53 @@ const Landing = () => {
           width: { xs: '100%', md: '95%'}, 
         }}
       >
-          <Box
-            component="img"
-            src={draw}
-            alt="Descripción de la imagen"
-            sx={{
-              flex: 1,
-              width: { xs: '90%', md: '40%'}, 
-              height: '700px',
-              margin: { xs: '20px auto', md: '0 auto' },
-              borderRadius: 2,
-              border: '10px solid white',
-              boxShadow: 3,
-            }}
-          />
 
           <Box
-            component="img"
-            src={inside}
-            alt="Descripción de la imagen"
-            sx={{
-              flex: 1,
-              width: { xs: '90%', md: '40%'}, 
-              height: '700px',
-              borderRadius: 2,
-              border: '10px solid white',
-              boxShadow: 3,
-            }}
-          />
+              sx={{
+                flex: 1,
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}
+            >
+                <Box
+                  component="img"
+                  src={draw}
+                  alt="Descripción de la imagen"
+                  sx={{
+                    width: '100%',
+                    maxWidth: '800px',
+                    height: '600px',
+                    borderRadius: 2,
+                    border: '10px solid white',
+                    boxShadow: 3,
+                    objectFit: 'cover', 
+                  }}
+                />
+          </Box>
+          <Box
+              sx={{
+                flex: 1,
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}
+            >
+                <Box
+                  component="img"
+                  src={inside}
+                  alt="Descripción de la imagen"
+                  sx={{
+                    width: '100%',
+                    maxWidth: '535px',
+                    height: '600px',
+                    borderRadius: 2,
+                    border: '10px solid white',
+                    boxShadow: 3,
+                    objectFit: 'cover',
+                  }}
+                />
+          </Box>
       </Box>
     </Box>
                              {/* Section - Get in Touch  */}
