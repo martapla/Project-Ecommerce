@@ -138,7 +138,6 @@ const Landing = () => {
           flex: 1,
           width: { xs: '90%', md: '80%' },
           height: '800px',
-          // mb: { xs: '0px', md: '100px' },
           borderRadius: 2,
           border: '10px solid white',
           boxShadow: 3,
@@ -231,7 +230,7 @@ const Landing = () => {
                   sx={{
                     width: '100%',
                     maxWidth: '800px',
-                    height: '600px',
+                    height: { md:  '500px'},
                     borderRadius: 2,
                     border: '10px solid white',
                     boxShadow: 3,
@@ -253,8 +252,7 @@ const Landing = () => {
                   alt="Descripción de la imagen"
                   sx={{
                     width: '100%',
-                    maxWidth: '535px',
-                    height: '600px',
+                    height: { md:  '500px'},
                     borderRadius: 2,
                     border: '10px solid white',
                     boxShadow: 3,
@@ -271,9 +269,10 @@ const Landing = () => {
         display: 'flex',
         flexDirection: { xs: 'column', md: 'row' }, 
         justifyContent: 'center',
-        gap: 8,
-        padding: 4,
-        mt: 10,
+        gap: 8, 
+        padding: {xs: '10px' , sm: '20px'},
+        mt: {xs: '40px', sm: '60px'},
+        mb: 4
       }}
     >
      
@@ -283,7 +282,7 @@ const Landing = () => {
           variant="h2"
           sx={{
             fontFamily: 'Mandali, sans-serif', 
-            fontSize: {xs: '45px', md: '60px'},
+            fontSize: {xs: '40px', sm: '56px'},
             fontWeight: 200,                   
             color: '#444444',
             textAlign: 'left',
