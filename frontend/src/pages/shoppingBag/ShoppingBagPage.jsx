@@ -23,9 +23,10 @@ const ShoppingBagPage = () => {
           justifyContent: 'center', 
           alignItems: 'center', 
           padding: { xs: 2, md: 4 },
-          margin: '0 auto',
+          margin: '40px auto',
           width: '100%',
-          minHeight: 'calc(100vh - 64px - 100px)', 
+          // height:'auto'
+          // minHeight: 'calc(100vh - 64px - 100px)', 
         }}
       >
 
