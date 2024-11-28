@@ -25,8 +25,6 @@ const ShoppingBagPage = () => {
           padding: { xs: 2, md: 4 },
           margin: '40px auto',
           width: '100%',
-          // height:'auto'
-          // minHeight: 'calc(100vh - 64px - 100px)', 
         }}
       >
 
