@@ -31,7 +31,6 @@ const ShoppingBagPage = () => {
         {/* Products */}
         <Box 
         sx={{
-          flex: 1,
           width: { xs: '100%', sm: '70%', md: '45%' },
           boxSizing: 'border-box',
           border:3, borderRadius:1, borderColor: 'white'

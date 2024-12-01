@@ -12,6 +12,6 @@ body {
 
   #root {
     display: grid;
-    min-height: 100dvh; /* Asegura que ocupe al menos el alto de la ventana */
-    grid-template-rows: auto 1fr auto; /* Navbar, contenido dinámico, Footer */
+    min-height: 100dvh; 
+    grid-template-rows: auto 1fr auto; 
   }

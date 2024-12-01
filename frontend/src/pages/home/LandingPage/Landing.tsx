@@ -28,8 +28,7 @@ const Landing = () => {
         fontSize: { xs: '90px', sm: '140px' }, 
         color: '#e00845',
         mb: 2,
-        mt: 3
-        // mt: { xs: '0px', sm: '30px' }, 
+        mt: { xs: '0px', sm: '30px' }, 
       }}
     >
       MINÏM
@@ -128,7 +127,7 @@ const Landing = () => {
         mb: { xs: '60px', md: '100px' },                     
       }}
     >
-      Collection
+      Collections
   </Button>
 
   <Box
