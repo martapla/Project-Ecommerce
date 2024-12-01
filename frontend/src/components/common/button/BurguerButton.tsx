@@ -3,10 +3,10 @@ import { styled } from '@mui/system';
 
 
 const CustomMenuIcon = styled('div')(({ theme }) => ({
-  width: 30, // Longitud de las líneas
-  height: 3, // Grosor de las líneas
-  backgroundColor: 'white', // Color de las líneas
-  borderRadius: 8, // Puntas redondeadas
+  width: 30, 
+  height: 3, 
+  backgroundColor: 'white', 
+  borderRadius: 8, 
   position: 'relative',
   '&::before, &::after': {
     content: '""',
@@ -18,10 +18,10 @@ const CustomMenuIcon = styled('div')(({ theme }) => ({
     left: 0,
   },
   '&::before': {
-    top: -8, // Separación hacia arriba
+    top: -8, 
   },
   '&::after': {
-    top: 8, // Separación hacia abajo
+    top: 8, 
   },
 }));
 

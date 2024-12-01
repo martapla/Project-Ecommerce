@@ -29,6 +29,7 @@ const Landing = () => {
         color: '#e00845',
         mb: 2,
         mt: 3
+        // mt: { xs: '0px', sm: '30px' }, 
       }}
     >
       MINÏM

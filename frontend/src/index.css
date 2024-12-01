@@ -4,7 +4,14 @@
 
 body {
     background-color: #f8e9ef; 
-    /* background-color: #f9d7e4;  */
     margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
     height: 100vh; 
+  }
+
+  #root {
+    display: grid;
+    min-height: 100dvh; /* Asegura que ocupe al menos el alto de la ventana */
+    grid-template-rows: auto 1fr auto; /* Navbar, contenido dinámico, Footer */
   }
