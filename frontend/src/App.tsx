@@ -6,11 +6,13 @@ import Collection from './pages/collection/CollectionPage';
 import ShoppingBag from './pages/shoppingBag/ShoppingBagPage';
 import Footer from "./components/footer/Footer";
 import { ShoppingBagProvider } from "./context/ShoppingBagContext";
+import ScrollToTop from './components/common/button/ScrollToTop';
 
 function App() {
   return (
   
     <ShoppingBagProvider>
+      <ScrollToTop />
       <Navbar />
       <Routes>
         <Route path="/" element={<LandingPage />} />
