@@ -38,8 +38,8 @@ const CollectionPage = ()  => {
       Slip into a world where comfort becomes allure,and every detail is a quiet ode to femininity. 
       Wrap yourself in the magic of silk, made uniquely for you.`,
       products: [
-        { name: 'Silk Bra', price: '230', image: vpink },
-        { name: 'Silk V', price: '120', image: vpink },
+        { name: 'Silk Bra', price: 180, image: vpink },
+        { name: 'Silk V', price: 120, image: vpink },
       ],
     },
     {
@@ -51,8 +51,8 @@ const CollectionPage = ()  => {
       and shadow that captures the eye and sparks the imagination. 
       Slip into Black Stars and let each piece envelop you in the magic of midnight.`,
       products: [
-        { name: 'Black Corset', price: '150', image: blackcat },
-        { name: 'Black Set', price: '180', image: blacklook },
+        { name: 'Black Corset', price: 210, image: blackcat },
+        { name: 'Black Set', price: 380, image: blacklook },
       ],
     },
     {
@@ -64,8 +64,8 @@ const CollectionPage = ()  => {
       Like a blossom in full bloom, Red Oriental brings warmth, grace, and a touch of romance 
       to your every moment.`,
       products: [
-        { name: 'Oriental Bra', price: '210', image: redbra },
-        { name: 'Oriental V', price: '170', image: vred },
+        { name: 'Oriental Bra', price: 170, image: redbra },
+        { name: 'Oriental V', price: 130, image: vred },
       ],
     },
   ];
@@ -98,7 +98,7 @@ const CollectionPage = ()  => {
         backgroundColor: 'white',       
         color: '#e57390',               
         border: '1px solid #e57390',    
-        padding: '28px',          
+        padding: '20px',          
         fontSize: '20px',               
         borderRadius: '50%',             
         fontFamily: 'Mandali, sans-serif', 
@@ -116,7 +116,7 @@ const CollectionPage = ()  => {
         display: 'block', margin: '0 auto'                    
       }}
     >
-      Go to Shop
+      Wish List
     </Button>
 
 

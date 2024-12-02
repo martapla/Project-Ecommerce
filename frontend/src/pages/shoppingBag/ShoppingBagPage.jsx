@@ -14,6 +14,8 @@ const ShoppingBagPage = () => {
     removeProduct(product);
   }; 
 
+  const totalPrice = selectedProducts.reduce((sum, product) => sum + product.price, 0);
+
   return (
     <>
       <Box
@@ -45,7 +47,7 @@ const ShoppingBagPage = () => {
 
                 <Box key={index} sx={{ display: 'flex', alignItems: 'center', borderBottom: 2, borderColor:'white',paddingTop:1,paddingBottom:1 }}>
                   <img src={product.image} alt={product.name} style={{ width: 80, height: 80, marginRight: 10 }} />
-                  <Typography sx={{ flex: 1 }}>
+                  <Typography sx={{ flex: 1, fontFamily: 'Kodchasan, sans-serif',  fontWeight: 500}}>
                     {product.name} - {product.price} €
                   </Typography>
 
@@ -65,6 +67,10 @@ const ShoppingBagPage = () => {
                 </Box>
               ))}
                
+               <Typography sx={{ marginTop: 2, textAlign: 'right', fontFamily: 'Kodchasan, sans-serif',  fontWeight: 600 }}>
+                Total: {totalPrice} €
+              </Typography>
+
             </Box>
           )}
         </Box>

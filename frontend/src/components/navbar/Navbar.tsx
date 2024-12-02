@@ -30,7 +30,7 @@ export default function NavBar() {
   const navLinks = [
     { text: 'Home', to: '/' },
     { text: 'Collections', to: '/collection' },
-    { text: 'Check List', to: '/shopping' },
+    { text: 'Wish List', to: '/shopping' },
   ];
 
   return (
@@ -114,7 +114,7 @@ export default function NavBar() {
           '.MuiDrawer-paper': {
             backgroundColor: 'white', 
             boxShadow: 'none', 
-            height: '22%',
+            height: '19%',
             
           },
         }}
