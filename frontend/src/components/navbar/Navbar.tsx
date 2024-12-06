@@ -102,7 +102,7 @@ export default function NavBar() {
       </AppBar>
       {/* Menu display (Drawer) */}
       <Drawer
-        anchor="left"
+        anchor="right"
         open={drawerOpen}
         onClose={toggleDrawer(false)}
         BackdropProps={{
@@ -114,8 +114,6 @@ export default function NavBar() {
           '.MuiDrawer-paper': {
             backgroundColor: 'white', 
             boxShadow: 'none', 
-            height: '19%',
-            
           },
         }}
       >
