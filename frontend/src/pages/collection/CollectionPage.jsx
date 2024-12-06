@@ -98,7 +98,7 @@ const CollectionPage = ()  => {
         backgroundColor: 'white',       
         color: '#e57390',               
         border: '1px solid #e57390',    
-        padding: { xs: '10px', sm: '20px' },          
+        padding: { xs: '14px', sm: '20px' },          
         fontSize: { xs: '16px', sm: '20px' },               
         borderRadius: '50%',             
         fontFamily: 'Mandali, sans-serif', 
@@ -113,11 +113,12 @@ const CollectionPage = ()  => {
           borderColor:  '#e57390',          
           boxShadow: '10px 0px 0px #e57390',   
         },
-        mb: { xs: '60px', md: '100px' }, 
+        mb: { xs: '60px', md: '60px' }, 
+        mt: { xs: '0px', md: '40px' }, 
         display: 'block', margin: '0 auto'                    
       }}
     >
-      Wishlist
+      See Wishlist
     </Button>
 
 

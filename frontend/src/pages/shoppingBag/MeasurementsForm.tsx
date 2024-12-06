@@ -34,7 +34,7 @@ const MeasurementsForm = () => {
         display: 'flex',
         flexDirection: 'column',
         maxWidth: 400,
-        margin: 'auto',
+        margin: '20px auto',
         gap: 2,
         padding: 3,
         backgroundColor: '#f9f9f9',
@@ -43,7 +43,11 @@ const MeasurementsForm = () => {
       }}
       onSubmit={handleSubmit}
     >
-      <Typography variant="h6" sx={{  fontFamily: 'Mandali, sans-serif', textAlign: 'center', mb: 2 }}>
+      <Typography  sx={{  
+        fontFamily: 'Mandali, sans-serif', 
+        textAlign: 'center', 
+        fontSize: '18px', 
+        }}>
          Your Measurements
       </Typography>
       
