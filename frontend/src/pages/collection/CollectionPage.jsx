@@ -98,13 +98,14 @@ const CollectionPage = ()  => {
         backgroundColor: 'white',       
         color: '#e57390',               
         border: '1px solid #e57390',    
-        padding: '20px',          
-        fontSize: '20px',               
+        padding: { xs: '10px', sm: '20px' },          
+        fontSize: { xs: '16px', sm: '20px' },               
         borderRadius: '50%',             
         fontFamily: 'Mandali, sans-serif', 
         fontWeight: 300,
         textTransform: 'none',          
         boxShadow: '-10px 0px 0px #e57390', 
+        boxShadow: { xs: '-6px 0px 0px #e57390', md: '-10px 0px 0px #e57390' },     
         transition: 'all 0.3s ease-in-out',
         '&:hover': {
           backgroundColor: 'white', 
@@ -116,7 +117,7 @@ const CollectionPage = ()  => {
         display: 'block', margin: '0 auto'                    
       }}
     >
-      Wish List
+      Wishlist
     </Button>
 
 

@@ -4,6 +4,7 @@ import Navbar from './components/navbar/Navbar'
 import LandingPage from './pages/home/LandingPage/Landing';
 import Collection from './pages/collection/CollectionPage';
 import ShoppingBag from './pages/shoppingBag/ShoppingBagPage';
+import CheckoutPage from './pages/checkout/CheckoutPage';
 import Footer from "./components/footer/Footer";
 import { ShoppingBagProvider } from "./context/ShoppingBagContext";
 import ScrollToTop from './components/common/button/ScrollToTop';
@@ -20,6 +21,8 @@ function App() {
         <Route path="/collection" element={<Collection />} />
 
         <Route path="/shopping" element={<ShoppingBag />} />
+
+        <Route path="/checkout" element={<CheckoutPage />} />
       </Routes>
       <Footer />
     </ShoppingBagProvider>

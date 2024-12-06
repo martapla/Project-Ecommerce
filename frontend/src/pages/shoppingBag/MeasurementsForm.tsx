@@ -9,7 +9,8 @@ const MeasurementsForm = () => {
     hips: '',
   });
 
-  
+  const [submitted, setSubmitted] = useState(false);
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setMeasurements({ ...measurements, [name]: value });
@@ -18,7 +19,12 @@ const MeasurementsForm = () => {
   
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+
+    if (!measurements.chest || !measurements.waist || !measurements.hips) {
+      // Si falta un campo, no se envía el formulario
+      return;
+    }
+    setSubmitted(true);
   };
 
   return (
@@ -47,6 +53,7 @@ const MeasurementsForm = () => {
         name="chest"
         value={measurements.chest}
         onChange={handleInputChange}
+        required
         fullWidth
       />
       
@@ -56,6 +63,7 @@ const MeasurementsForm = () => {
         name="waist"
         value={measurements.waist}
         onChange={handleInputChange}
+        required
         fullWidth
       />
       
@@ -65,6 +73,7 @@ const MeasurementsForm = () => {
         name="hips"
         value={measurements.hips}
         onChange={handleInputChange}
+        required
         fullWidth
       />
       
@@ -80,7 +89,7 @@ const MeasurementsForm = () => {
           },
         }}
       >
-        Submit
+        {submitted ? 'Submitted' : 'Submit'}
       </Button>
     </Box>
   );

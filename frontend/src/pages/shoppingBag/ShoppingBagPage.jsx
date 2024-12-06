@@ -1,14 +1,16 @@
 import React, {useContext} from 'react';
 import { useLocation } from 'react-router-dom';
-import { Box, Typography } from '@mui/material';
+import { Box, Typography, Button } from '@mui/material';
 import MeasurementsForm from './MeasurementsForm'
 import { ShoppingBagContext } from "../../context/ShoppingBagContext";
 import DeleteIcon from '@mui/icons-material/Delete';
+import { useNavigate } from 'react-router-dom';
 
 const ShoppingBagPage = () => {
   const { selectedProducts, removeProduct } = useContext(ShoppingBagContext);
   // const location = useLocation();  
   // const { selectedProducts } = location.state || { selectedProducts: [] };  
+  const navigate = useNavigate();
 
   const handleRemoveProduct = (product) => {
     removeProduct(product);
@@ -27,6 +29,7 @@ const ShoppingBagPage = () => {
           padding: { xs: 2, md: 4 },
           margin: '40px auto',
           width: '100%',
+          border: 'red 1px solid'
         }}
       >
 
@@ -72,11 +75,46 @@ const ShoppingBagPage = () => {
               </Typography>
 
             </Box>
+            
           )}
         </Box>
 
+                       {/* Checkout Button */}
+        <Box>
+     
+            <Button
+              variant="contained"
+              onClick={() => navigate('/checkout')}
+              sx={{
+                backgroundColor: 'white',
+                color: '#e57390',
+                border: '1px solid #e57390',
+                padding: '10px',
+                fontSize: '14px',
+                borderRadius: '50%',
+                fontFamily: 'Mandali, sans-serif',
+                fontWeight: 300,
+                textTransform: 'none',
+                boxShadow: '-6px 0px 0px #e57390',
+                transition: 'all 0.3s ease-in-out',
+                '&:hover': {
+                  backgroundColor: 'white',
+                  color: '#e57390',
+                  borderColor: '#e57390',
+                  boxShadow: '10px 0px 0px #e57390',
+                },
+                mb: { xs: '20px', md: '100px' },
+                mt: { xs: '50px', md: '100px' },
+              }}
+            >
+              Checkout
+            </Button>
+        </Box>
+
+
+                         {/* Measurement Form */}
         <Box 
-        
+
         sx={{
           flex: 1,
           padding: 2,
@@ -85,8 +123,9 @@ const ShoppingBagPage = () => {
         }}
         >
            <MeasurementsForm/>
+           
         </Box>
-        
+      
       </Box>
     </>
   );

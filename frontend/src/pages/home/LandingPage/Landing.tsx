@@ -85,11 +85,11 @@ const Landing = () => {
       variant="h2"
       sx={{
         fontFamily: 'Mandali, sans-serif', 
-        fontSize: { xs: '18px', sm: '20px' },
+        fontSize: { xs: '16px', sm: '20px' },
         fontWeight: 300,                   
         color:'#444444',
         textAlign: 'center',
-        mb: 10,
+        mb: { xs: '40px', sm: '80px' }, 
         width:'80%'
       }}
     >
@@ -110,8 +110,8 @@ const Landing = () => {
         backgroundColor: 'white',       
         color: '#e57390',               
         border: '1px solid #e57390',    
-        padding: '20px',          
-        fontSize: '20px',               
+        padding: { xs: '16px', sm: '20px' },          
+        fontSize: { xs: '16px', sm: '20px' },              
         borderRadius: '50%',             
         fontFamily: 'Mandali, sans-serif', 
         fontWeight: 300,
@@ -124,10 +124,11 @@ const Landing = () => {
           borderColor:  '#e57390',          
           boxShadow: '10px 0px 0px #e57390',   
         },
-        mb: { xs: '60px', md: '100px' },                     
+        mb: { xs: '60px', md: '100px' },
+        mt: { xs: '0px', md: '30px' },                  
       }}
     >
-      Collections
+      See Collections
   </Button>
 
   <Box
@@ -175,7 +176,7 @@ const Landing = () => {
         variant="body1"
         sx={{
           fontFamily: 'Mandali, sans-serif',
-          fontSize: { xs: '18px', sm: '20px' },
+          fontSize: { xs: '16px', sm: '20px' },
           fontWeight: 300,
           color: '#444444',
           mb: 4,
@@ -191,7 +192,7 @@ const Landing = () => {
         variant="body1"
         sx={{
           fontFamily: 'Mandali, sans-serif',
-          fontSize: { xs: '18px', sm: '20px' },
+          fontSize: { xs: '16px', sm: '20px' },
           fontWeight: 300,
           color: '#444444',
           mb: 4,

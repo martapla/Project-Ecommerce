@@ -30,7 +30,7 @@ export default function NavBar() {
   const navLinks = [
     { text: 'Home', to: '/' },
     { text: 'Collections', to: '/collection' },
-    { text: 'Wish List', to: '/shopping' },
+    { text: 'Wishlist', to: '/shopping' },
   ];
 
   return (
