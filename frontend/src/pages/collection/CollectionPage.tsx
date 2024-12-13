@@ -8,27 +8,28 @@ import vred from '../../assets/images/vred.jpeg'
 import redbra from '../../assets/images/redbra.jpeg'
 import blackcat from '../../assets/images/blackcat.jpeg'
 import blacklook from '../../assets/images/blacklook.jpeg'
-import { ShoppingBagContext } from "../../context/ShoppingBagContext";
+import { ShoppingBagContext, ShoppingBagContextType } from "../../context/ShoppingBagContext";
 
-const CollectionPage = ()  => {
+interface Product {
+  name: string;
+  price: number;
+  image: string;
+}
+
+interface Collection {
+  title: string;
+  description: string;
+  products: Product[];
+}
+
+const CollectionPage: React.FC = ()  => {
 
   // const [selectedProducts, setSelectedProducts] = useState([]);
   const navigate = useNavigate();
-  const { addProduct, removeProduct } = useContext(ShoppingBagContext);
-  
-    // Add products
-    // const handleSelectProduct = (product) => {
-    //   setSelectedProducts((prevSelectedProducts) => [...prevSelectedProducts, product]);
-    // };
+  // const { addProduct, removeProduct } = useContext(ShoppingBagContext);
+  const { addProduct, removeProduct } = useContext<ShoppingBagContextType>(ShoppingBagContext);
 
-    // Remove products
-  // const handleDeselectProduct = (product) => {
-  //   setSelectedProducts((prevSelectedProducts) => 
-  //     prevSelectedProducts.filter((p) => p.name !== product.name)
-  //   );
-  // };
-
-  const collections = [
+  const collections: Collection[] = [
     {
       title: 'Hidden Silk',
       description: `Soft whispers of a bygone era. Each piece is handcrafted, 
@@ -86,8 +87,6 @@ const CollectionPage = ()  => {
           products={collection.products}
           onSelectProduct={addProduct}
           onDeselectProduct={removeProduct}
-          // onSelectProduct={handleSelectProduct}
-          // onDeselectProduct={handleDeselectProduct}
         />
       ))}
 
@@ -104,7 +103,6 @@ const CollectionPage = ()  => {
         fontFamily: 'Mandali, sans-serif', 
         fontWeight: 300,
         textTransform: 'none',          
-        boxShadow: '-10px 0px 0px #e57390', 
         boxShadow: { xs: '-6px 0px 0px #e57390', md: '-10px 0px 0px #e57390' },     
         transition: 'all 0.3s ease-in-out',
         '&:hover': {

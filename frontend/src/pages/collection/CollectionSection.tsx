@@ -2,7 +2,27 @@ import React from 'react';
 import { Box, Typography } from '@mui/material';
 import ProductCard from './ProductCard';
 
-const CollectionSection = ({ title, description, products, onSelectProduct,onDeselectProduct }) => {
+interface Product {
+  name: string;
+  price: number;
+  image: string;
+}
+
+interface CollectionSectionProps {
+  title: string;
+  description: string;
+  products: Product[];
+  onSelectProduct: (product: Product) => void;
+  onDeselectProduct: (product: Product) => void;
+}
+
+const CollectionSection: React.FC<CollectionSectionProps> = ({ 
+  title, 
+  description, 
+  products, 
+  onSelectProduct,
+  onDeselectProduct,
+}) => {
   return (
     <Box
       sx={{

@@ -15,7 +15,9 @@ interface ShoppingBagContextType {
 }
 
 const CheckoutPage = () => {
-  const { selectedProducts } = useContext(ShoppingBagContext);
+  // const { selectedProducts } = useContext(ShoppingBagContext);
+  const { selectedProducts } = useContext<ShoppingBagContextType>(ShoppingBagContext);
+
   const navigate = useNavigate();
 
   // Form
