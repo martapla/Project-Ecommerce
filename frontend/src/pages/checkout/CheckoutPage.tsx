@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import { Box, Typography, TextField, Button } from '@mui/material';
 import { ShoppingBagContext } from "../../context/ShoppingBagContext";
 import { useNavigate } from 'react-router-dom';
+import whitelook from '../../assets/images/whitelook.jpeg'
 
 interface Product {
   id: string;
@@ -34,30 +35,56 @@ const CheckoutPage = () => {
   };
 
   return (
-    <Box sx={{ 
-      padding: 4, 
-      display: 'flex', 
-      flexDirection: 'column', 
-      alignItems: 'center' ,
-      justifyContent: 'center',
-      }}>
-      <Typography variant="h4" sx={{ marginBottom: 2 }}>Checkout</Typography>
+     <Box
+      sx={{
+        width: '100%',
+        display: 'flex',
+        flexDirection: { xs: 'column', md: 'row' }, 
+        justifyContent: 'center',
+        gap: 8, 
+        padding: {xs: '10px' , sm: '20px'},
+        mt: {xs: '40px', sm: '60px'},
+        mb: 4,
+        border: '1px solid red'
+      }}
+    >
+
+    {/* Form  */}
+      <Box
+        sx={{
+          flex: 1,
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          padding: 4,
+          border: '1px solid green'
+        }}
+      >
       
       {/* Total Price */}
       <Box sx={{ width: '100%', marginBottom: 2 }}>
-        <Typography variant="h6">Total Payment: {totalPrice} €</Typography>
+        <Typography variant="h6" fontFamily = 'Mandali, sans-serif' >Total Payment: {totalPrice} €</Typography>
       </Box>
 
       {/* Measurements */}
       <Box sx={{ width: '100%', marginBottom: 2 }}>
-        <Typography variant="h6">Measurements:</Typography>
+        <Typography variant="h6" fontFamily = 'Mandali, sans-serif'>Measurements:</Typography>
         <Typography></Typography> 
       </Box>
 
+      <Typography variant="h4" sx={{ marginBottom: 2, fontFamily: 'Mandali, sans-serif',  }}>Checkout</Typography>
+
+      <Box sx={{ 
+         flex: 1, display: 'flex', 
+         justifyContent: 'center', flexDirection:'column', 
+         width: '100%',
+         border: '1px solid pink'
+        }}>
       {/* Form */}
       <form onSubmit={handleSubmit} style={{ width: '100%' }}>
         <Box sx={{ 
-           width: { xs: '100%', sm: '70%', md: '50%' },
+           width: { xs: '100%', sm: '70%', md: '90%' },
            display: 'flex', 
            flexDirection: 'column', 
            marginBottom: 2 }}>
@@ -100,6 +127,7 @@ const CheckoutPage = () => {
         <Button
           type="submit"
           variant="contained"
+          onClick={() => alert('Check your email to confirm.')}
           sx={{
 
             backgroundColor: '#e57390',
@@ -113,6 +141,24 @@ const CheckoutPage = () => {
           Make Payment
         </Button>
       </form>
+      </Box>
+      </Box>
+          {/* Image */}
+          <Box sx={{ flex: 1, display: 'flex', justifyContent: 'center' }}>
+        
+          <Box
+          component="img"
+          src={whitelook}
+          alt="redimage"
+          sx={{
+            width: '100%', 
+            borderRadius: 2, 
+            border: '6px solid white',  
+            boxShadow: 3,
+            objectFit: 'cover',
+          }}
+        />
+        </Box>
     </Box>
   );
 };
