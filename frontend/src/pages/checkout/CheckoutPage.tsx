@@ -29,6 +29,7 @@ const CheckoutPage = () => {
 
   const totalPrice = selectedProducts.reduce((sum, product) => sum + product.price, 0);
 
+
   const handleSubmit = (event) => {
     event.preventDefault();
     
@@ -38,13 +39,12 @@ const CheckoutPage = () => {
      <Box
       sx={{
         width: '100%',
+        height:'auto',
         display: 'flex',
         flexDirection: { xs: 'column', md: 'row' }, 
         justifyContent: 'center',
         gap: 8, 
-        padding: {xs: '10px' , sm: '20px'},
-        mt: {xs: '40px', sm: '60px'},
-        mb: 4,
+        padding: {xs: '10px' , sm: '40px'},
         border: '1px solid red'
       }}
     >
@@ -57,37 +57,40 @@ const CheckoutPage = () => {
           flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center',
-          padding: 4,
-          border: '1px solid green'
+          padding: { xs: '10px', sm: '30px'},
+          border:3, borderRadius:1, borderColor: 'white'
         }}
       >
+      <Typography  
+        sx={{ 
+          marginBottom: 3, 
+          fontFamily: 'Mandali, sans-serif', 
+          fontSize:{ xs: '24px', sm: '30px'},
+          }}>Checkout
+      </Typography>
       
       {/* Total Price */}
-      <Box sx={{ width: '100%', marginBottom: 2 }}>
-        <Typography variant="h6" fontFamily = 'Mandali, sans-serif' >Total Payment: {totalPrice} €</Typography>
+      <Box sx={{ width: '96%', marginBottom: 3}}>
+        <Typography fontFamily = 'Mandali, sans-serif' >Total Payment: {totalPrice} €</Typography>
       </Box>
-
-      {/* Measurements */}
-      <Box sx={{ width: '100%', marginBottom: 2 }}>
-        <Typography variant="h6" fontFamily = 'Mandali, sans-serif'>Measurements:</Typography>
-        <Typography></Typography> 
-      </Box>
-
-      <Typography variant="h4" sx={{ marginBottom: 2, fontFamily: 'Mandali, sans-serif',  }}>Checkout</Typography>
 
       <Box sx={{ 
-         flex: 1, display: 'flex', 
+         flex: 1, display: 'flex', alignItems: 'center',
          justifyContent: 'center', flexDirection:'column', 
          width: '100%',
          border: '1px solid pink'
         }}>
+
       {/* Form */}
-      <form onSubmit={handleSubmit} style={{ width: '100%' }}>
         <Box sx={{ 
-           width: { xs: '100%', sm: '70%', md: '90%' },
+          component:"form",
+          width: '100%',
            display: 'flex', 
            flexDirection: 'column', 
-           marginBottom: 2 }}>
+           marginBottom: 2 }}
+           onSubmit={handleSubmit}
+        >
+
           <TextField 
             label="Full Name" 
             variant="outlined" 
@@ -140,7 +143,6 @@ const CheckoutPage = () => {
         >
           Make Payment
         </Button>
-      </form>
       </Box>
       </Box>
           {/* Image */}

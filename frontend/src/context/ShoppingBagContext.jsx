@@ -3,6 +3,7 @@ import React, { createContext, useState } from 'react';
 // Crear el contexto
 export const ShoppingBagContext = createContext();
 
+
 // Proveedor del contexto
 export const ShoppingBagProvider = ({ children }) => {
   const [selectedProducts, setSelectedProducts] = useState([]);

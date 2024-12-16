@@ -55,7 +55,15 @@ const ShoppingBagPage = () => {
                 }}>
                 {selectedProducts.map((product, index) => (
 
-                  <Box key={index} sx={{ display: 'flex', alignItems: 'center', borderBottom: 2, borderColor:'white',paddingTop:1,paddingBottom:1 }}>
+                  <Box key={index} 
+                    sx={{ 
+                        display: 'flex', 
+                        alignItems: 'center', 
+                        borderBottom: 2, 
+                        borderColor:'white',
+                        paddingTop:1,
+                        paddingBottom:1 
+                      }}>
                     <img src={product.image} alt={product.name} style={{ width: 80, height: 80, marginRight: 10 }} />
                     <Typography sx={{ flex: 1, fontFamily: 'Kodchasan, sans-serif', fontSize:'14px', fontWeight: 500}}>
                       {product.name} - {product.price} €
