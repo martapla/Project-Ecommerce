@@ -4,7 +4,7 @@ import { ShoppingBagContext } from "../../context/ShoppingBagContext";
 import { useNavigate } from 'react-router-dom';
 import whitelook from '../../assets/images/whitelook.jpeg'
 
-interface Product {
+export interface Product {
   id: string;
   name: string;
   price: number;
@@ -30,7 +30,7 @@ const CheckoutPage = () => {
   const totalPrice = selectedProducts.reduce((sum, product) => sum + product.price, 0);
 
 
-  const handleSubmit = (event) => {
+  const handleSubmit = (event: any) => {
     event.preventDefault();
     
   };
@@ -43,9 +43,10 @@ const CheckoutPage = () => {
         display: 'flex',
         flexDirection: { xs: 'column', md: 'row' }, 
         justifyContent: 'center',
-        gap: 8, 
+        gap: {xs: '30px' , sm: '64px'},
+        mb: {xs: '30px' , md: '0px'},
+        mt: {xs: '20px' , md: '0px'},
         padding: {xs: '10px' , sm: '40px'},
-        border: '1px solid red'
       }}
     >
 
@@ -78,7 +79,6 @@ const CheckoutPage = () => {
          flex: 1, display: 'flex', alignItems: 'center',
          justifyContent: 'center', flexDirection:'column', 
          width: '100%',
-         border: '1px solid pink'
         }}>
 
       {/* Form */}

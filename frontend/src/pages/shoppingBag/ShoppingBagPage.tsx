@@ -5,6 +5,8 @@ import MeasurementsForm from './MeasurementsForm'
 import { ShoppingBagContext } from "../../context/ShoppingBagContext";
 import DeleteIcon from '@mui/icons-material/Delete';
 import { useNavigate } from 'react-router-dom';
+import { Product } from '../checkout/CheckoutPage';
+
 
 const ShoppingBagPage = () => {
   const { selectedProducts, removeProduct } = useContext(ShoppingBagContext);
@@ -12,11 +14,11 @@ const ShoppingBagPage = () => {
   // const { selectedProducts } = location.state || { selectedProducts: [] };  
   const navigate = useNavigate();
 
-  const handleRemoveProduct = (product) => {
+  const handleRemoveProduct = (product: Product) => {
     removeProduct(product);
   }; 
 
-  const totalPrice = selectedProducts.reduce((sum, product) => sum + product.price, 0);
+  const totalPrice = selectedProducts.reduce((sum: number, product:Product) => sum + product.price, 0);
 
   return (
     <>
@@ -53,7 +55,7 @@ const ShoppingBagPage = () => {
               <Box sx={{ 
                   padding: { xs: '10px', sm:'20px' }
                 }}>
-                {selectedProducts.map((product, index) => (
+                {selectedProducts.map((product: Product, index: number) => (
 
                   <Box key={index} 
                     sx={{ 
