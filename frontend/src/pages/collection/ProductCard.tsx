@@ -1,6 +1,7 @@
 import React, { useState }  from 'react';
 import { Box, Card, CardMedia, CardContent, Typography, Button } from '@mui/material';
 
+
 const ProductCard = ({ name, price, image, onSelect, onDeselect }) => {
 
   const [isSelected, setIsSelected] = useState(false);

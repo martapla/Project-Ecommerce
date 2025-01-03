@@ -8,7 +8,7 @@ import vred from '../../assets/images/vred.jpeg'
 import redbra from '../../assets/images/redbra.jpeg'
 import blackcat from '../../assets/images/blackcat.jpeg'
 import blacklook from '../../assets/images/blacklook.jpeg'
-import { ShoppingBagContext, ShoppingBagContextType } from "../../context/ShoppingBagContext";
+import { ShoppingBagContext} from "../../context/ShoppingBagContext";
 
 interface Product {
   name: string;
@@ -26,8 +26,8 @@ const CollectionPage: React.FC = ()  => {
 
   // const [selectedProducts, setSelectedProducts] = useState([]);
   const navigate = useNavigate();
-  // const { addProduct, removeProduct } = useContext(ShoppingBagContext);
-  const { addProduct, removeProduct } = useContext<ShoppingBagContextType>(ShoppingBagContext);
+  const { addProduct, removeProduct } = useContext(ShoppingBagContext);
+  // const { addProduct, removeProduct } = useContext<ShoppingBagContextType>(ShoppingBagContext);
 
   const collections: Collection[] = [
     {

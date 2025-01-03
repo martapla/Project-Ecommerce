@@ -17,7 +17,7 @@ export default function NavBar() {
   const [drawerOpen, setDrawerOpen] = React.useState(false);
   const location = useLocation();
 
-  const toggleDrawer = (open) => (event) => {
+  const toggleDrawer = (open: any) => (event: any) => {
     if (
       event.type === 'keydown' &&
       (event.key === 'Tab' || event.key === 'Shift')
@@ -37,7 +37,7 @@ export default function NavBar() {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar
         position="static"
-        sx={{ backgroundColor: '#f8e9ef', boxShadow: 'none' }}
+        sx={{ backgroundColor: '#FFE8E8', boxShadow: 'none' }}
       >
         <Toolbar variant="dense">
         {location.pathname !== '/' && ( 
@@ -50,7 +50,7 @@ export default function NavBar() {
                 fontFamily: 'Kodchasan, sans-serif', 
                 fontWeight: 600,
                 fontSize: { xs: '24px', sm: '36px' }, 
-                color: '#e00845',
+                color: '#ef233c',
                 mt:{ xs: '2px', sm: '20px' }, 
                 ml:{ xs: '2px', sm: '3px' }, 
               }}

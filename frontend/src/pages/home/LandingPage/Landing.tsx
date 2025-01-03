@@ -4,6 +4,7 @@ import vpink from '../../../assets/images/vpink.jpeg'
 import inside from '../../../assets/images/inside.jpeg'
 import pinklace from '../../../assets/images/pinklace.jpeg'
 import draw from '../../../assets/images/draw.jpeg'
+import marble from '../../../assets/images/marble.jpeg'
 import { Box, Typography, Button,TextField } from '@mui/material'
 import { useNavigate } from 'react-router-dom';
 
@@ -26,7 +27,8 @@ const Landing = () => {
         fontFamily: 'Kodchasan, sans-serif', 
         fontWeight: 700,
         fontSize: { xs: '90px', sm: '140px' }, 
-        color: '#e00845',
+        // color: '#e00845',
+        color: '#ef233c',
         mb: 2,
         mt: { xs: '0px', sm: '30px' }, 
       }}
@@ -60,7 +62,7 @@ const Landing = () => {
         height: 'auto',
         margin: '0 auto',    
         borderRadius: 2, 
-        border: '10px solid white',  
+        border: { xs: '6px solid white', sm: '10px solid white' },  
         boxShadow: 3,
         objectFit: 'contain',
         opacity: 0.9
@@ -140,7 +142,7 @@ const Landing = () => {
           width: { xs: '90%', md: '80%' },
           height: '800px',
           borderRadius: 2,
-          border: '10px solid white',
+          border: { xs: '6px solid white', sm: '10px solid white' }, 
           boxShadow: 3,
         }}
         
@@ -155,6 +157,14 @@ const Landing = () => {
       flexDirection: 'column',
       alignItems:'center',
       px: 3,
+      pb: {xs: '50px', sm: '0px'},
+      mt: {xs: '40px', sm: '60px'},
+      backgroundImage:`linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.3)), url(${marble})`,
+      backgroundSize: 'cover', 
+      backgroundPosition: 'center', 
+      backgroundRepeat: 'no-repeat', 
+      borderTop:'10px solid lavenderblush',
+      borderBottom:'10px solid pink'
     }}
   >
       <Typography
@@ -165,7 +175,7 @@ const Landing = () => {
           fontWeight: 200,
           color: '#444444',
           mb: 3,
-          mt: { xs: '50px', sm: '60px' }, 
+          mt: { xs: '30px', sm: '40px' }, 
           
         }}
       >
@@ -233,7 +243,7 @@ const Landing = () => {
                     maxWidth: '800px',
                     height: { md:  '500px'},
                     borderRadius: 2,
-                    border: '10px solid white',
+                    border: { xs: '6px solid white', sm: '10px solid white' }, 
                     boxShadow: 3,
                     objectFit: 'cover', 
                   }}
@@ -255,7 +265,7 @@ const Landing = () => {
                     width: '100%',
                     height: { md:  '500px'},
                     borderRadius: 2,
-                    border: '10px solid white',
+                    border: { xs: '6px solid white', sm: '10px solid white' }, 
                     boxShadow: 3,
                     objectFit: 'cover',
                   }}
@@ -350,7 +360,7 @@ const Landing = () => {
           sx={{
             width: '100%', 
             borderRadius: 2, 
-            border: '10px solid white',  
+            border: { xs: '6px solid white', sm: '10px solid white' }, 
             boxShadow: 3,
             objectFit: 'cover',
           }}

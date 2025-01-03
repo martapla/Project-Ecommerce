@@ -11,7 +11,7 @@ const Footer = () => {
     <Box
     component="footer"
     sx={{
-      backgroundColor: '#f8e9ef', 
+      backgroundColor: '#FFE8E8', 
       padding:{ xs: 1, md: 2 }, 
       textAlign: 'center',
       mt: 'auto',
