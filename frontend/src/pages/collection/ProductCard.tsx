@@ -1,8 +1,17 @@
 import React, { useState }  from 'react';
 import { Box, Card, CardMedia, CardContent, Typography, Button } from '@mui/material';
+import { Product } from '../checkout/CheckoutPage';
 
+interface ProductCardProps {
+  id: string;
+  name: string;
+  price: number;
+  image: string;
+  onSelect: (product: Product) => void;
+  onDeselect: (product: Product) => void;
+}
 
-const ProductCard = ({ name, price, image, onSelect, onDeselect }) => {
+const ProductCard: React.FC<ProductCardProps> = ({ name, price, image,id, onSelect, onDeselect }) => {
 
   const [isSelected, setIsSelected] = useState(false);
 
@@ -10,11 +19,11 @@ const ProductCard = ({ name, price, image, onSelect, onDeselect }) => {
     if (isSelected) {
       // Si ya está seleccionado, lo deselecciona
       setIsSelected(false);
-      onDeselect({ name, price, image }); 
+      onDeselect({ name, price, image, id }); 
     } else {
       // Si no está seleccionado, lo selecciona
       setIsSelected(true);
-      onSelect({ name, price, image }); 
+      onSelect({ name, price, image, id }); 
     }
   };
 

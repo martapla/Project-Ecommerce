@@ -11,6 +11,7 @@ import blacklook from '../../assets/images/blacklook.jpeg'
 import { ShoppingBagContext} from "../../context/ShoppingBagContext";
 
 interface Product {
+  id: string;
   name: string;
   price: number;
   image: string;
@@ -39,8 +40,8 @@ const CollectionPage: React.FC = ()  => {
       Slip into a world where comfort becomes allure,and every detail is a quiet ode to femininity. 
       Wrap yourself in the magic of silk, made uniquely for you.`,
       products: [
-        { name: 'Silk Bra', price: 180, image: vpink },
-        { name: 'Silk V', price: 120, image: vpink },
+        {id:'0', name: 'Silk Bra', price: 180, image: vpink },
+        {id:'1',name: 'Silk V', price: 120, image: vpink },
       ],
     },
     {
@@ -52,8 +53,8 @@ const CollectionPage: React.FC = ()  => {
       and shadow that captures the eye and sparks the imagination. 
       Slip into Black Stars and let each piece envelop you in the magic of midnight.`,
       products: [
-        { name: 'Black Corset', price: 210, image: blackcat },
-        { name: 'Black Set', price: 380, image: blacklook },
+        {id:'2', name: 'Black Corset', price: 210, image: blackcat },
+        {id:'3', name: 'Black Set', price: 380, image: blacklook },
       ],
     },
     {
@@ -65,8 +66,8 @@ const CollectionPage: React.FC = ()  => {
       Like a blossom in full bloom, Red Oriental brings warmth, grace, and a touch of romance 
       to your every moment.`,
       products: [
-        { name: 'Oriental Bra', price: 170, image: redbra },
-        { name: 'Oriental V', price: 130, image: vred },
+        {id:'4', name: 'Oriental Bra', price: 170, image: redbra },
+        {id:'5', name: 'Oriental V', price: 130, image: vred },
       ],
     },
   ];

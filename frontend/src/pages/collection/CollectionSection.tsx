@@ -3,6 +3,7 @@ import { Box, Typography } from '@mui/material';
 import ProductCard from './ProductCard';
 
 interface Product {
+  id: string;
   name: string;
   price: number;
   image: string;
@@ -90,6 +91,7 @@ const CollectionSection: React.FC<CollectionSectionProps> = ({
         {products.map((product, index) => (
           <ProductCard 
             key={index} 
+            id={product.id}
             name={product.name} 
             price={product.price} 
             image={product.image} 
