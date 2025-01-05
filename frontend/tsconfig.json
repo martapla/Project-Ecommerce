@@ -4,7 +4,7 @@
     "useDefineForClassFields": true,
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "allowJs": false,
-    "skipLibCheck": true,
+    "skipLibCheck": false, //
     "esModuleInterop": false,
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
@@ -14,8 +14,7 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    // "types": ["vitest/globals"],
-    "types": ["react", "react-dom", "react-router-dom", "jest", "@testing-library/react", "react/jsx-runtime"],
+    // "types": ["react", "react-dom", "react-router-dom", "jest", "@testing-library/react", "react/jsx-runtime"],
     "strict": false //
   },
   "include": ["src", "node_modules/@types"],
