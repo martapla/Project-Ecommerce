@@ -16,7 +16,7 @@
     "jsx": "react-jsx",
     // "types": ["vitest/globals"],
     // "types": ["jest", "@testing-library/react"],
-    "types": ["react", "react-router-dom", "react/jsx-runtime", "@mui/material"],
+    "types": ["react", "react-router-dom", "react/jsx-runtime", "@mui/material","jest", "@testing-library/react"],
     "strict": false //
   },
   "include": ["src"],
