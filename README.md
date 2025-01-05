@@ -2,7 +2,7 @@
 
 This is a Made to Measure Online Shop.
 
-![image](src/assets/landing.png)
+![image](src/assets/images/landing.png)
 
 ## Description
 In this website you´ll find a `Landing Page` with a short description of the brand.
