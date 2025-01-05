@@ -15,6 +15,7 @@
     "noEmit": true,
     "jsx": "react-jsx",
     // "types": ["vitest/globals"],
+    "types": ["jest", "@testing-library/react"],
     "strict": false //
   },
   "include": ["src"],
