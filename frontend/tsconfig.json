@@ -15,7 +15,8 @@
     "noEmit": true,
     "jsx": "react-jsx",
     // "types": ["vitest/globals"],
-    "types": ["jest", "@testing-library/react"],
+    // "types": ["jest", "@testing-library/react"],
+    "types": ["react", "react-router-dom", "react/jsx-runtime", "@mui/material"],
     "strict": false //
   },
   "include": ["src"],
