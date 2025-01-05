@@ -26,11 +26,10 @@ const Landing = () => {
       sx={{
         fontFamily: 'Kodchasan, sans-serif', 
         fontWeight: 700,
-        fontSize: { xs: '90px', sm: '140px' }, 
-        // color: '#e00845',
+        fontSize: { xs: '80px', sm: '120px' }, 
         color: '#ef233c',
-        mb: 2,
-        mt: { xs: '0px', sm: '30px' }, 
+        mb: 1,
+        mt: { xs: '0px', sm: '10px' }, 
       }}
     >
       MINÏM
@@ -38,15 +37,13 @@ const Landing = () => {
 
 
      <Typography
-        variant="h2"
         width ="90%"
         sx={{
           fontFamily: 'Mandali, sans-serif', 
-          fontSize: { xs: '26px', sm: '45px' }, 
-          fontWeight: 400,                   
+          fontSize: { xs: '20px', sm: '40px' }, 
           color: '#444444',
           textAlign: 'center',
-          mb: 6,
+          mb: 4,
           
         }}
       >
