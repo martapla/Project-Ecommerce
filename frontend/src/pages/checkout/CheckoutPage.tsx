@@ -155,7 +155,7 @@ const CheckoutPage = () => {
           sx={{
             width: '100%', 
             borderRadius: 2, 
-            border: '6px solid white',  
+            border: '3px solid white',  
             boxShadow: 3,
             objectFit: 'cover',
           }}

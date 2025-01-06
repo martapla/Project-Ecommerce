@@ -1,6 +1,6 @@
 import React from 'react'
 import vred from '../../../assets/images/vred.jpeg'
-import vpink from '../../../assets/images/vpink.jpeg'
+import a from '../../../assets/images/a.png'
 import inside from '../../../assets/images/inside.jpeg'
 import pinklace from '../../../assets/images/pinklace.jpeg'
 import draw from '../../../assets/images/draw.jpeg'
@@ -43,7 +43,7 @@ const Landing = () => {
           fontSize: { xs: '20px', sm: '40px' }, 
           color: '#444444',
           textAlign: 'center',
-          mb: 4,
+          mb: { xs: '14px', sm: '30px' }, 
           
         }}
       >
@@ -52,16 +52,15 @@ const Landing = () => {
                             {/* Main Image */}
     <Box
       component="img"
-      src={vpink}
+      src={a}
       alt="Descripción de la imagen"
       sx={{
-        width: '90%',
+        width: '96%',
         height: 'auto',
         margin: '0 auto',    
         borderRadius: 2, 
-        border: { xs: '6px solid white', sm: '10px solid white' },  
+        border: { xs: '3px solid white', sm: '6px solid white' },  
         boxShadow: 3,
-        objectFit: 'contain',
         opacity: 0.9
       }} />
                              {/* Section - Brand Philosophy */}
@@ -136,10 +135,10 @@ const Landing = () => {
         alt="Descripción de la imagen"
         sx={{
           flex: 1,
-          width: { xs: '90%', md: '80%' },
+          width: { xs: '90%', md: '90%' },
           height: '800px',
           borderRadius: 2,
-          border: { xs: '6px solid white', sm: '10px solid white' }, 
+          border: { xs: '3px solid white', sm: '6px solid white' }, 
           boxShadow: 3,
         }}
         
@@ -240,7 +239,7 @@ const Landing = () => {
                     maxWidth: '800px',
                     height: { md:  '500px'},
                     borderRadius: 2,
-                    border: { xs: '6px solid white', sm: '10px solid white' }, 
+                    border: { xs: '3px solid white', sm: '6px solid white' }, 
                     boxShadow: 3,
                     objectFit: 'cover', 
                   }}
@@ -262,7 +261,7 @@ const Landing = () => {
                     width: '100%',
                     height: { md:  '500px'},
                     borderRadius: 2,
-                    border: { xs: '6px solid white', sm: '10px solid white' }, 
+                    border: { xs: '3px solid white', sm: '6px solid white' }, 
                     boxShadow: 3,
                     objectFit: 'cover',
                   }}
@@ -357,7 +356,7 @@ const Landing = () => {
           sx={{
             width: '100%', 
             borderRadius: 2, 
-            border: { xs: '6px solid white', sm: '10px solid white' }, 
+            border: { xs: '3px solid white', sm: '6px solid white' }, 
             boxShadow: 3,
             objectFit: 'cover',
           }}

@@ -3,7 +3,8 @@ import  React,{ useState, useContext } from 'react';
 import { Typography, Button } from '@mui/material';
 import CollectionSection from './CollectionSection';
 import { useNavigate } from 'react-router-dom';
-import vpink from '../../assets/images/vpink.jpeg'
+import pinktop from '../../assets/images/pinktop.jpg'
+import pinkv from '../../assets/images/pinkv.jpg'
 import vred from '../../assets/images/vred.jpeg'
 import redbra from '../../assets/images/redbra.jpeg'
 import blackcat from '../../assets/images/blackcat.jpeg'
@@ -40,8 +41,8 @@ const CollectionPage: React.FC = ()  => {
       Slip into a world where comfort becomes allure,and every detail is a quiet ode to femininity. 
       Wrap yourself in the magic of silk, made uniquely for you.`,
       products: [
-        {id:'0', name: 'Silk Bra', price: 180, image: vpink },
-        {id:'1',name: 'Silk V', price: 120, image: vpink },
+        {id:'0', name: 'Silk Bra', price: 180, image: pinktop },
+        {id:'1',name: 'Silk V', price: 120, image: pinkv },
       ],
     },
     {
