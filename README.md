@@ -2,8 +2,6 @@
 
 This is a Made to Measure Online Shop.
 
-![image](src/assets/images/landing.png)
-
 ## Description
 In this website you´ll find a `Landing Page` with a short description of the brand.
 There is a `Collections` section where you can select the products.
