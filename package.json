@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "start": "vite",
-    "build": "tsc && vite build --outDir public",
+    "build": "tsc && vite build --outDir dist",
     "preview": "vite preview",
     "check-types": "tsc",
     "test": "vitest",
