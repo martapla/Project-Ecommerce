@@ -2,7 +2,6 @@
 
 This is a Made to Measure Online Shop.
 
-![landing](readme-a.png)
 
 ## Description
 In this website you´ll find a `Landing Page` with a short description of the brand.
@@ -25,8 +24,7 @@ From here you can go to the `Checkout`.
  - The project is also `fully responsive`, for mobile, tablet and desktop.
 
 
-![wishlist](readme-b.png)
-![checkout](readme-c.png)
+
 
 
 

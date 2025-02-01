@@ -49,10 +49,13 @@ export default function NavBar() {
                 flexGrow: 1,
                 fontFamily: 'Kodchasan, sans-serif', 
                 fontWeight: 600,
+                textDecoration: 'none',
+                WebkitTextStroke: '0.5px white',
                 fontSize: { xs: '24px', sm: '36px' }, 
                 color: '#ef233c',
+                textShadow: '2px 2px 1px rgba(245, 153, 153, 0.5)', 
                 mt:{ xs: '2px', sm: '20px' }, 
-                ml:{ xs: '2px', sm: '3px' }, 
+                ml:{ xs: '6px', sm: '3px' }, 
               }}
             >
               MINÏM
@@ -88,8 +91,10 @@ export default function NavBar() {
                 to={link.to}
                 sx={{
                   marginRight: 4,
-                  fontFamily: 'Mandali, sans-serif',
-                  color: 'black',
+                  fontFamily: 'Gantari, serif',
+                  color: '#a67e77',
+                  fontWeight: 300, 
+                  fontSize: '18px',
                   textDecoration: 'none',
                   '&:hover, &.active': { color: '#e00845' },
                 }}
@@ -112,7 +117,7 @@ export default function NavBar() {
         }}
         sx={{
           '.MuiDrawer-paper': {
-            backgroundColor: 'white', 
+            backgroundColor: '#faf5f5', 
             boxShadow: 'none', 
           },
         }}
@@ -140,7 +145,10 @@ export default function NavBar() {
               >
                 <ListItemText
                   primary={link.text}
-                  sx={{ color: 'black', '&:hover': { color: '#e00845' } }}
+                  sx={{ 
+                    fontFamily: 'Gantari, serif',
+                    color: '#a67e77', 
+                    '&:hover': { color: '#e00845' } }}
                 />
               </ListItem>
             ))}

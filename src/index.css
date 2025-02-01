@@ -1,9 +1,9 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Kodchasan:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mandali&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gantari:wght@100..900&display=swap'); 
 
 body {
-  /* background-color: ©  */
+    font-family: 'Gantari', serif;
     background-color: #FFE8E8; 
     margin: 0; 
     padding: 0;
