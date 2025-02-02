@@ -28,7 +28,7 @@ const ShoppingBagPage = () => {
           flexDirection: { xs: 'column', md: 'row' }, 
           justifyContent: 'center', 
           alignItems: 'center', 
-          padding: { xs: 2, md: 4 },
+          py: { xs: 2, md: 4 },
           margin: '20px auto',
           mt: '20px',
           mb:{ xs: '0px', md: '10px' }, 
@@ -38,9 +38,10 @@ const ShoppingBagPage = () => {
                     {/* Products */}
           <Box 
           sx={{
-            width: { xs: '100%', sm: '70%', md: '50%' },
+            width: { xs: '85%', sm: '70%', md: '50%' },
             boxSizing: 'border-box',
-            border:2, borderRadius:1, borderColor: 'white'
+            border:2, borderRadius:1, borderColor: 'white',
+            ml:{ md: '20px' }, 
           }}
           >
 
@@ -48,7 +49,9 @@ const ShoppingBagPage = () => {
               <Typography sx={{
                  margin: 2, 
                  textAlign:'center',
-                 fontSize:{ xs: '14px', sm: '16px' }, 
+                 fontFamily: 'Gantari, serif',
+                 color: '#a67e77',
+                 fontSize:{ xs: '16px', sm: '18px' }, 
                 
                 }}>Your Wishlist is empty...</Typography>
             ) : (

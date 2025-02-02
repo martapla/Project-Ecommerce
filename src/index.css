@@ -14,5 +14,6 @@ body {
   #root {
     display: grid;
     min-height: 100dvh; 
-    grid-template-rows: auto 1fr auto; 
+    grid-template-rows: auto 1fr auto;  
+    /* to keep footer fixed  */
   }

@@ -12,10 +12,9 @@ const Footer = () => {
       component="footer"
       sx={{
         backgroundColor: '#FFE8E8', 
-        padding:{ xs: 1, md: 2 }, 
         textAlign: 'center',
-        mt: 'auto',
-        width: '100%',       
+        py:{ xs: 1, md: 2 }, 
+        // mt: 'auto',
       }}
     >
       <Typography 
@@ -35,6 +34,7 @@ const Footer = () => {
           display: 'flex', 
           justifyContent: 'center', 
           mt: 1,
+          mb: 1,
           gap: 1,
           color: '#a67e77',
         }}>

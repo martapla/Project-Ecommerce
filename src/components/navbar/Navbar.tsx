@@ -86,14 +86,13 @@ export default function NavBar() {
             {navLinks.map((link) => (
               <Typography
                 key={link.text}
-                variant="h6"
                 component={NavLink}
                 to={link.to}
                 sx={{
-                  marginRight: 4,
+                  marginLeft: 3,
                   fontFamily: 'Gantari, serif',
                   color: '#a67e77',
-                  fontWeight: 300, 
+                  fontWeight: 400, 
                   fontSize: '18px',
                   textDecoration: 'none',
                   '&:hover, &.active': { color: '#e00845' },

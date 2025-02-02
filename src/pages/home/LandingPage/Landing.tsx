@@ -1,17 +1,21 @@
 import React from 'react'
 import vred from '../../../assets/images/vred.jpeg'
-import a from '../../../assets/images/a.png'
 import inside from '../../../assets/images/inside.jpeg'
 import pinklace from '../../../assets/images/pinklace.jpeg'
 import draw from '../../../assets/images/draw.jpeg'
 import { Box, Typography, Button,TextField } from '@mui/material'
 import { useNavigate } from 'react-router-dom'
-import blackcat from '../../../assets/images/blackcat.jpeg'
+import heroMob from '../../../assets/images/hero-mob.png'
+import headDesk from '../../../assets/images/header-desk.png'
+import { useTheme } from '@mui/material/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
 import '../../../index.css';
 
 const Landing = () => {
 
   const navigate = useNavigate();
+  const theme = useTheme();
+  const heroImg = useMediaQuery(theme.breakpoints.up('sm'));
 
   return (
     <>
@@ -30,7 +34,7 @@ const Landing = () => {
           fontSize: { xs: '60px', sm: '90px' }, 
           color: '#ef233c',
           WebkitTextStroke: '0.5px white',
-          mt: { xs: '-30px', md: '10px' }, 
+          mt: { xs: '-30px', md: '-10px' }, 
           textShadow: '2px 2px 1px rgba(245, 153, 153, 0.5)', 
         }}
       >
@@ -43,10 +47,10 @@ const Landing = () => {
           sx={{
             fontFamily: "Gantari, serif",
             fontWeight: 300, 
-            fontSize: { xs: '20px', sm: '30px' }, 
+            fontSize: { xs: '22px', sm: '30px' }, 
             color: '#a67e77',
             textAlign: 'center',
-            mb: { xs: '14px', sm: '30px' }, 
+            mb: { xs: '10px', sm: '20px', md:'10px' }, 
           }}
         >
           Made to Measure Lingerie
@@ -54,16 +58,14 @@ const Landing = () => {
                             {/* Hero Image */}
       <Box
         component="img"
-        src={a}
+        src={heroImg ? headDesk : heroMob}
         alt="Descripción de la imagen"
         sx={{
           width: '96%',
           height: 'auto',
           margin: '0 auto',    
-          borderRadius: 2, 
-          border: { xs: '3px solid white', sm: '6px solid white' },  
-          boxShadow: 3,
-          opacity: 0.9
+          borderRadius: 1, 
+          border: { xs: '2px solid white', sm: '3px solid white' },  
         }} />
                              {/* Section - Brand Philosophy */}
       <Typography
@@ -74,8 +76,8 @@ const Landing = () => {
           fontWeight: 200,                   
           color: '#a67e77',
           textAlign: 'center',
-          mt: { xs: '20px', sm: '60px' }, 
-          padding:{ xs: 3 }, 
+          mt: { xs: '10px', md:'8px' }, 
+          padding:{ xs: 2 }, 
         }}
       >
         Brand Philosophy
@@ -84,7 +86,7 @@ const Landing = () => {
       <Typography
         sx={{
           fontFamily: "Gantari, serif",
-          fontSize: { xs: '16px', sm: '20px' },
+          fontSize: { xs: '18px', sm: '20px' },
           fontWeight: 300,                   
           color:'#a67e77',
           lineHeight: 1.8,
@@ -113,7 +115,7 @@ const Landing = () => {
           height: '800px',
           borderRadius: 2,
           border: { xs: '3px solid white', sm: '6px solid white' }, 
-          boxShadow: 3,
+          // boxShadow: 3,
         }}
       />
 
@@ -153,11 +155,9 @@ const Landing = () => {
           display: 'flex',
           flexDirection: 'column',
           alignItems:'center',
-          px: 3,
           pb: {xs: '50px', sm: '0px'},
           mt: {xs: '40px', sm: '60px'},
           backgroundColor:'#fcf3f3',
-          width:'100%'
         }}
       >
         <Typography
@@ -178,7 +178,7 @@ const Landing = () => {
           sx={{
             textAlign: 'left',
             fontFamily: "Gantari, serif",
-            fontSize: { xs: '16px', sm: '20px' },
+            fontSize: { xs: '18px', sm: '20px' },
             fontWeight: 300,                   
             color:'#a67e77',
             lineHeight: 1.8,
@@ -195,7 +195,7 @@ const Landing = () => {
           sx={{
             textAlign: 'left',
             fontFamily: "Gantari, serif",
-            fontSize: { xs: '16px', sm: '20px' },
+            fontSize: { xs: '18px', sm: '20px' },
             fontWeight: 300,                   
             color:'#a67e77',
             lineHeight: 1.8,
@@ -306,7 +306,7 @@ const Landing = () => {
               sx={{
                 width: '100%',
                 fontFamily: 'Gantari, serif',
-                fontSize: 14,
+                fontSize: '16px',
                 color:'#a67e77',
                   "& .MuiOutlinedInput-root": {
      
