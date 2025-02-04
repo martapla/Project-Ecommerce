@@ -1,8 +1,9 @@
 import React from 'react'
 import vred from '../../../assets/images/vred.jpeg'
-import inside from '../../../assets/images/inside.jpeg'
-import pinklace from '../../../assets/images/pinklace.jpeg'
-import draw from '../../../assets/images/draw.jpeg'
+import vpieces from '../../../assets/images/v-pieces.png'
+import brapink from '../../../assets/images/bra-pink.png'
+import pattern from '../../../assets/images/pattern.png'
+import brapattern from '../../../assets/images/brapattern.png'
 import { Box, Typography, Button,TextField } from '@mui/material'
 import { useNavigate } from 'react-router-dom'
 import heroMob from '../../../assets/images/hero-mob.png'
@@ -107,15 +108,15 @@ const Landing = () => {
                               {/* Pink Bra Image */}
       <Box
         component="img"
-        src={pinklace}
+        src={brapink}
         alt="Descripción de la imagen"
         sx={{
           flex: 1,
           width: { xs: '90%', md: '90%' },
           height: '800px',
-          borderRadius: 2,
-          border: { xs: '3px solid white', sm: '6px solid white' }, 
-          // boxShadow: 3,
+          borderRadius: 1,
+          border: { xs: '2px solid white', sm: '3px solid white' }, 
+          boxShadow: '10px 10px 10px rgba(255, 182, 193, 0.4)',
         }}
       />
 
@@ -204,15 +205,15 @@ const Landing = () => {
           }}
         >
           Our dedicated team of artisans meticulously handcrafts each item, combining modern techniques with timeless artistry. 
-          By prioritizing sustainability, we create pieces that are not only stunning but also mindful of our impact on the world.
+          We create pieces that are not only stunning but also mindful of our impact on the world.
         </Typography>
 
                                     {/* 2 Images Box */}
         <Box
           sx={{
             display: 'flex',
-            flexDirection: { xs: 'column', md: 'row' }, 
-            margin: { xs: '0 auto', md: '80px auto' },
+            flexDirection: { xs: 'column', sm: 'row' }, 
+            margin: { xs: '0 auto', sm: '80px auto' },
             alignItems: 'center', 
             justifyContent: 'center', 
             gap: 4, 
@@ -229,15 +230,16 @@ const Landing = () => {
               >
                   <Box
                     component="img"
-                    src={draw}
+                    src={pattern}
                     alt="Descripción de la imagen"
                     sx={{
                       width: '100%',
-                      maxWidth: '800px',
-                      height: { md:  '500px'},
-                      borderRadius: 2,
-                      border: { xs: '3px solid white', sm: '6px solid white' }, 
-                      boxShadow: 3,
+                       maxWidth: '800px',
+                       height: { sm:  '306px', md: '500px'},
+                       //height: { md: '500px'},
+                      borderRadius: 1,
+                      border: { xs: '2px solid white', sm: '3px solid white' }, 
+                      boxShadow: '6px 10px 10px rgba(255, 182, 193, 0.4)',
                       objectFit: 'cover', 
                     }}
                   />
@@ -252,14 +254,14 @@ const Landing = () => {
               >
                   <Box
                     component="img"
-                    src={inside}
+                    src={brapattern}
                     alt="Descripción de la imagen"
                     sx={{
                       width: '100%',
-                      height: { md:  '500px'},
-                      borderRadius: 2,
-                      border: { xs: '3px solid white', sm: '6px solid white' }, 
-                      boxShadow: 3,
+                      height: { sm:  '306px', md:  '500px'},
+                      borderRadius: 1,
+                      border: { xs: '2px solid white', sm: '3px solid white' }, 
+                      boxShadow: '6px 10px 10px rgba(255, 182, 193, 0.4)',
                       objectFit: 'cover',
                     }}
                   />
@@ -369,13 +371,13 @@ const Landing = () => {
         <Box sx={{ flex: 1, display: 'flex', justifyContent: 'center' }}>
           <Box
             component="img"
-            src={vred}
+            src={vpieces}
             alt="redimage"
             sx={{
               width: '100%', 
-              borderRadius: 2, 
-              border: { xs: '3px solid white', sm: '6px solid white' }, 
-              boxShadow: 3,
+              borderRadius: 1, 
+              border: { xs: '2px solid white', sm: '3px solid white' }, 
+              boxShadow: '10px 10px 10px rgba(255, 182, 193, 0.4)',
               objectFit: 'cover',
             }}
           />
