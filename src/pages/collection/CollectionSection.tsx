@@ -48,13 +48,12 @@ const CollectionSection: React.FC<CollectionSectionProps> = ({
         <Typography
           variant="h2"
           sx={{
-            fontFamily: 'Mandali, sans-serif',
-            fontSize: 40,
-            fontWeight: 200,
-            // color:'#e57390',
-            color:'#E75076',
+            fontFamily: 'Gantari, serif',
+            fontSize: { xs: '40px', sm: '56px' }, 
+            fontWeight: 300,
+            color: '#a67e77',
             textAlign: 'left',
-            mb: 4,
+            mb: 3,
             mt: { xs: '40px', sm: '60px' }, 
           }}
         >
@@ -64,13 +63,14 @@ const CollectionSection: React.FC<CollectionSectionProps> = ({
         <Typography
           variant="h2"
           sx={{
-            fontFamily: 'Mandali, sans-serif',
+            fontFamily: 'Gantari, serif',
             fontSize: { xs: '18px', sm: '20px' },
             fontWeight: 300,
-            color: '#444444',
+            color:'#a67e77',
             textAlign: 'left',
+            lineHeight: 1.8,
             mb: 6,
-            width: '80%',
+            width: { xs: '80%', md: '86%' }, 
           }}
         >
           {description}

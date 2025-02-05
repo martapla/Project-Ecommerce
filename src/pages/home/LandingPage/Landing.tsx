@@ -1,5 +1,4 @@
 import React from 'react'
-import vred from '../../../assets/images/vred.jpeg'
 import vpieces from '../../../assets/images/v-pieces.png'
 import brapink from '../../../assets/images/bra-pink.png'
 import pattern from '../../../assets/images/pattern.png'

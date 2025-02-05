@@ -31,19 +31,23 @@ const ProductCard: React.FC<ProductCardProps> = ({ name, price, image,id, onSele
     
     <Card 
       sx={{ 
-        height: { sm: 500, md: 600 }, 
-        width: { xs: '80%', sm: 400, md: 500 }, 
-        boxShadow: 1, 
+        width: { xs: '80%', md: '60%'}, 
         margin: 1,
+        border: { xs: '2px solid white', sm: '6px solid white' }, 
+          boxShadow: '10px 10px 10px rgba(255, 182, 193, 0.4)',
       }}
     >
       {/* Product Image */}
       <CardMedia
         component="img"
-        height="200px"
+        height="450"
         image={image} 
         alt="Product Image"
-        sx={{ borderRadius: ' 0'}}
+        sx={{ 
+          objectFit: 'cover', 
+          width: '100%' , 
+          
+         }}
       />
       
       {/* Product Info */}
@@ -57,28 +61,38 @@ const ProductCard: React.FC<ProductCardProps> = ({ name, price, image,id, onSele
         }}
       >
         {/* Product Details */}
-        <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-        <Typography variant="h6" component="div" sx={{ fontFamily: 'Mandali, sans-serif', mb: 1 }}>
-        {name}
-        </Typography>
-        <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
-        {price} €
-        </Typography>
+        <Box sx={{ 
+          display: 'flex', 
+          flexDirection: 'column' ,
+          mt:1,
+          gap:1
+          }}>
+
+          <Typography  variant="h6" component="div" 
+          sx={{ fontFamily: 'Gantari, serif', color:'#a67e77' }}>
+          {name}
+          </Typography>
+
+          <Typography 
+          sx={{ color:'#a67e77' }}> 
+          {price} €
+          </Typography>
+
         </Box>
 
         {/* Select Button */}
           <Button
-            variant="contained"
-            color="primary"
             onClick={handleSelectClick}
             sx={{
-              backgroundColor: isSelected ? '#e00845' : 'white',
-              color: isSelected ? 'white' : '#e00845',
-              border: '1px solid #e00845',
+              px:'10px',
+              backgroundColor: isSelected ? '#f57e75' : 'white',
+              color: isSelected ? 'white' : '#f57e75',
+              border: '1px solid #f57e75',
               ':hover': {
-                backgroundColor: '#e00845',
+                backgroundColor: '#f57e75',
                 color: 'white',
               },
+              boxShadow: '3px 3px 1px rgba(255, 182, 193, 0.8)',
             }}
           >
              {isSelected ? 'Selected' : 'Select'}
