@@ -3,6 +3,7 @@ import vpieces from '../../../assets/images/v-pieces.png'
 import brapink from '../../../assets/images/bra-pink.png'
 import pattern from '../../../assets/images/pattern.png'
 import brapattern from '../../../assets/images/brapattern.png'
+import twoblack from '../../../assets/images/twoblack.png'
 import { Box, Typography, Button,TextField } from '@mui/material'
 import { useNavigate } from 'react-router-dom'
 import heroMob from '../../../assets/images/hero-mob.png'
@@ -34,7 +35,7 @@ const Landing = () => {
           fontSize: { xs: '60px', sm: '90px' }, 
           color: '#ef233c',
           WebkitTextStroke: '0.5px white',
-          mt: { xs: '-30px', md: '-10px' }, 
+          mt: { xs: '-30px', md: '10px' }, 
           textShadow: '2px 2px 1px rgba(245, 153, 153, 0.5)', 
         }}
       >
@@ -50,7 +51,7 @@ const Landing = () => {
             fontSize: { xs: '22px', sm: '30px' }, 
             color: '#a67e77',
             textAlign: 'center',
-            mb: { xs: '10px', sm: '20px', md:'10px' }, 
+            mb: { xs: '10px', sm: '20px', md:'30px' }, 
           }}
         >
           Made to Measure Lingerie
@@ -61,7 +62,7 @@ const Landing = () => {
         src={heroImg ? headDesk : heroMob}
         alt="Descripción de la imagen"
         sx={{
-          width: '96%',
+          width: '90%',
           height: 'auto',
           margin: '0 auto',    
           borderRadius: 1, 
@@ -76,7 +77,7 @@ const Landing = () => {
           fontWeight: 200,                   
           color: '#a67e77',
           textAlign: 'center',
-          mt: { xs: '10px', md:'8px' }, 
+          mt: { xs: '10px', md:'20px' }, 
           padding:{ xs: 2 }, 
         }}
       >
@@ -90,7 +91,7 @@ const Landing = () => {
           fontWeight: 300,                   
           color:'#a67e77',
           lineHeight: 1.8,
-          mb: { xs: '40px', sm: '80px' }, 
+          mb: { xs: '40px', sm: '60px' }, 
           width:'90%'
         }}
       >
@@ -104,20 +105,71 @@ const Landing = () => {
           to wear like a second, truest skin.
       </Typography>
                     
-                              {/* Pink Bra Image */}
+                           {/* two images */}
+
       <Box
-        component="img"
-        src={brapink}
-        alt="Descripción de la imagen"
-        sx={{
-          flex: 1,
-          width: { xs: '90%', md: '90%' },
-          height: '800px',
-          borderRadius: 1,
-          border: { xs: '2px solid white', sm: '3px solid white' }, 
-          boxShadow: '10px 10px 10px rgba(255, 182, 193, 0.4)',
-        }}
-      />
+          sx={{
+            display: 'flex',
+            flexDirection: { xs: 'column', sm: 'row' }, 
+            margin: { xs: '10px auto', sm: '10px auto' },
+            alignItems: 'center', 
+            justifyContent: 'center', 
+            gap: 4, 
+            // width:'90%', 
+            width: { xs: '90%', md: '95%'}, 
+          }}
+        >
+            <Box
+                sx={{
+                  flex: 1,
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}
+              >
+                  <Box
+                    component="img"
+                    src={brapink}
+                    alt="Descripción de la imagen"
+                    sx={{
+                      width: '100%',  // Asegura que ocupe todo el contenedor
+                      minWidth: { xs: '380px',sm: 'auto' }, 
+                      height: { xs: '300px', sm: '420px', md: '500px' },  // Tamaños ajustados por resolución
+                      borderRadius: 1,
+                      border: { xs: '2px solid white', sm: '3px solid white' }, 
+                      boxShadow: '6px 10px 10px rgba(255, 182, 193, 0.4)',
+                      objectFit: 'cover',  // Evita deformaciones, ajusta la imagen para cubrir el área
+                    }}
+                  />
+            </Box>
+            <Box
+                sx={{
+                  flex: 1,
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  padding:'10px'
+                }}
+              >
+                  <Box
+                    component="img"
+                    src={brapattern}
+                    alt="Descripción de la imagen"
+                    sx={{
+                      width: '100%',  // Ocupa todo el ancho disponible
+                      minWidth: { xs: '380px',sm: 'auto' }, 
+                      height: { xs: '300px', sm: '420px', md: '500px' },  // Mantiene la misma altura para ambas imágenes
+                      borderRadius: 1,
+                      border: { xs: '2px solid white', sm: '3px solid white' }, 
+                      boxShadow: '6px 10px 10px rgba(255, 182, 193, 0.4)',
+                      objectFit: 'cover',  // Asegura que ambas imágenes se comporten de manera similar
+                    }}
+                  />
+            </Box>
+        </Box>
+         
+      
+      
 
                       {/* Button Collection */}
       <Button
@@ -235,7 +287,6 @@ const Landing = () => {
                       width: '100%',
                        maxWidth: '800px',
                        height: { sm:  '306px', md: '500px'},
-                       //height: { md: '500px'},
                       borderRadius: 1,
                       border: { xs: '2px solid white', sm: '3px solid white' }, 
                       boxShadow: '6px 10px 10px rgba(255, 182, 193, 0.4)',
@@ -253,7 +304,7 @@ const Landing = () => {
               >
                   <Box
                     component="img"
-                    src={brapattern}
+                    src={twoblack}
                     alt="Descripción de la imagen"
                     sx={{
                       width: '100%',
