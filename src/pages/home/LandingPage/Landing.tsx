@@ -1,9 +1,10 @@
 import React from 'react'
 import vpieces from '../../../assets/images/v-pieces.png'
-import brapink from '../../../assets/images/bra-pink.png'
+import pinkbranew from '../../../assets/images/pinkbranew.png'
 import pattern from '../../../assets/images/pattern.png'
-import brapattern from '../../../assets/images/brapattern.png'
-import twoblack from '../../../assets/images/twoblack.png'
+import patternew from '../../../assets/images/patternew.png'
+import blacktwonew from '../../../assets/images/blacktwonew.png'
+import roundpa from '../../../assets/images/roundpa.png'
 import { Box, Typography, Button,TextField } from '@mui/material'
 import { useNavigate } from 'react-router-dom'
 import heroMob from '../../../assets/images/hero-mob.png'
@@ -47,8 +48,8 @@ const Landing = () => {
           width ="90%"
           sx={{
             fontFamily: "Gantari, serif",
-            fontWeight: 300, 
-            fontSize: { xs: '22px', sm: '30px' }, 
+            fontWeight: { xs: '400', sm: '300' }, 
+            fontSize: { xs: '26px', sm: '30px' }, 
             color: '#a67e77',
             textAlign: 'center',
             mb: { xs: '10px', sm: '20px', md:'30px' }, 
@@ -74,7 +75,7 @@ const Landing = () => {
         sx={{
           fontFamily: "Gantari, serif",
           fontSize: { xs: '40px', sm: '56px' }, 
-          fontWeight: 200,                   
+          fontWeight: 300,                   
           color: '#a67e77',
           textAlign: 'center',
           mt: { xs: '10px', md:'20px' }, 
@@ -91,7 +92,7 @@ const Landing = () => {
           fontWeight: 300,                   
           color:'#a67e77',
           lineHeight: 1.8,
-          mb: { xs: '40px', sm: '60px' }, 
+          mb: 4,
           width:'90%'
         }}
       >
@@ -111,12 +112,11 @@ const Landing = () => {
           sx={{
             display: 'flex',
             flexDirection: { xs: 'column', sm: 'row' }, 
-            margin: { xs: '10px auto', sm: '10px auto' },
+            margin: { xs: '0 auto', sm: '80px auto' },
             alignItems: 'center', 
             justifyContent: 'center', 
             gap: 4, 
-            // width:'90%', 
-            width: { xs: '90%', md: '95%'}, 
+            width: { xs: '90%', md: '90%'}, 
           }}
         >
             <Box
@@ -129,16 +129,15 @@ const Landing = () => {
               >
                   <Box
                     component="img"
-                    src={brapink}
+                    src={pinkbranew}
                     alt="Descripción de la imagen"
                     sx={{
-                      width: '100%',  // Asegura que ocupe todo el contenedor
-                      minWidth: { xs: '380px',sm: 'auto' }, 
-                      height: { xs: '300px', sm: '420px', md: '500px' },  // Tamaños ajustados por resolución
+                      width:'100%',
+                      height: { sm:  '306px', md: '500px'},
                       borderRadius: 1,
                       border: { xs: '2px solid white', sm: '3px solid white' }, 
                       boxShadow: '6px 10px 10px rgba(255, 182, 193, 0.4)',
-                      objectFit: 'cover',  // Evita deformaciones, ajusta la imagen para cubrir el área
+                      objectFit: 'cover',  
                     }}
                   />
             </Box>
@@ -148,21 +147,19 @@ const Landing = () => {
                   display: 'flex',
                   justifyContent: 'center',
                   alignItems: 'center',
-                  padding:'10px'
                 }}
               >
                   <Box
                     component="img"
-                    src={brapattern}
+                    src={patternew}
                     alt="Descripción de la imagen"
                     sx={{
-                      width: '100%',  // Ocupa todo el ancho disponible
-                      minWidth: { xs: '380px',sm: 'auto' }, 
-                      height: { xs: '300px', sm: '420px', md: '500px' },  // Mantiene la misma altura para ambas imágenes
+                      width:'100%',
+                      height: { sm:  '306px', md:  '500px'},
                       borderRadius: 1,
                       border: { xs: '2px solid white', sm: '3px solid white' }, 
                       boxShadow: '6px 10px 10px rgba(255, 182, 193, 0.4)',
-                      objectFit: 'cover',  // Asegura que ambas imágenes se comporten de manera similar
+                      objectFit: 'cover', 
                     }}
                   />
             </Box>
@@ -216,7 +213,7 @@ const Landing = () => {
           sx={{
             fontFamily: "Gantari, serif",
             fontSize: { xs: '40px', sm: '56px' }, 
-            fontWeight: 200,                   
+            fontWeight: 300,                   
             color: '#a67e77',
             mb: 3,
             mt: { xs: '30px', sm: '50px' }, 
@@ -304,7 +301,7 @@ const Landing = () => {
               >
                   <Box
                     component="img"
-                    src={twoblack}
+                    src={blacktwonew}
                     alt="Descripción de la imagen"
                     sx={{
                       width: '100%',
@@ -318,6 +315,62 @@ const Landing = () => {
             </Box>
         </Box>
       </Box>
+
+           {/* Section - About Us  */}
+           <Box
+        sx={{
+          width: '90%',
+          display: 'flex',
+          flexDirection: { xs: 'column', md: 'row' }, 
+          justifyContent: 'start',
+          gap: 8, 
+          padding: {xs: '10px' , sm: '20px'},
+          mt: {xs: '40px', sm: '60px'},
+          mb: 4,
+          border:'1px solid #a67e77', 
+          backgroundColor:'#e2d8d86b',
+        }}
+      >
+         {/* Left Side - Text */}
+         <Box sx={{ 
+          flex: 1, 
+          display: 'flex', 
+          justifyContent: 'center', 
+          flexDirection:'column'}}
+        >
+            <Typography
+              sx={{
+                fontFamily: "Gantari, serif",
+                fontSize: {xs: '40px', sm: '56px'},
+                fontWeight: 300,                   
+                color:'#a67e77',
+                textAlign: 'center',
+                // mb: { xs: '20px', sm: '40px' }, 
+              }}
+            >
+              About Us
+            </Typography>
+        </Box>
+     
+                  {/* Right Side - Image */}
+
+        <Box sx={{ flex: 1, display: 'flex', justifyContent: 'center' }}>
+          <Box
+            component="img"
+            src={roundpa}
+            alt="redimage"
+            sx={{
+              width:'70%', 
+              borderRadius: '50%', 
+              // border: { xs: '2px solid white', sm: '3px solid white' }, 
+              boxShadow: ' 6px 6px 10px rgba(255, 182, 193, 0.4)',
+              objectFit: 'contain',
+            }}
+          />
+        </Box>
+          
+      </Box>
+
                              {/* Section - Get in Touch  */}
       <Box
         sx={{
@@ -343,7 +396,7 @@ const Landing = () => {
               sx={{
                 fontFamily: "Gantari, serif",
                 fontSize: {xs: '40px', sm: '56px'},
-                fontWeight: 200,                   
+                fontWeight: 300,                   
                 color:'#a67e77',
                 textAlign: 'left',
                 mb: { xs: '20px', sm: '40px' }, 
