@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import { Box, Typography, TextField, Button } from '@mui/material';
 import { ShoppingBagContext } from "../../context/ShoppingBagContext";
 import { useNavigate } from 'react-router-dom';
-import whitelook from '../../assets/images/whitelook.jpeg'
+import birds from '../../assets/images/birds.png'
 
 export interface Product {
   id: string;
@@ -16,7 +16,6 @@ interface ShoppingBagContextType {
 }
 
 const CheckoutPage = () => {
-  // const { selectedProducts } = useContext(ShoppingBagContext);
   const { selectedProducts } = useContext<ShoppingBagContextType>(ShoppingBagContext);
 
   const navigate = useNavigate();
@@ -38,15 +37,16 @@ const CheckoutPage = () => {
   return (
      <Box
       sx={{
-        width: '100%',
+        width:  {xs: '80%', md: '70%'},
         height:'auto',
         display: 'flex',
-        flexDirection: { xs: 'column', md: 'row' }, 
+        flexDirection: 'column', 
         justifyContent: 'center',
-        gap: {xs: '30px' , sm: '64px'},
-        mb: {xs: '30px' , md: '0px'},
-        mt: {xs: '20px' , md: '0px'},
-        padding: {xs: '10px' , sm: '40px'},
+        gap: {xs: '30px', md: '60px'},
+        mx:'auto',
+        mt: {xs: '40px' , md: '80px'},
+        mb: {xs: '30px' , md: '60px'},
+        padding: {xs: '10px', md: '40px'},
       }}
     >
 
@@ -58,21 +58,26 @@ const CheckoutPage = () => {
           flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center',
-          padding: { xs: '10px', sm: '30px'},
-          border:3, borderRadius:1, borderColor: 'white'
+          padding: { xs: '20px', sm: '30px'},
+          border:2, borderRadius:1, borderColor: 'white'
         }}
       >
       <Typography  
         sx={{ 
           marginBottom: 3, 
-          fontFamily: 'Mandali, sans-serif', 
-          fontSize:{ xs: '24px', sm: '30px'},
+          fontFamily: "Gantari, serif",
+          fontSize: { xs: '30px', sm: '36px' },
+          fontWeight: 300,
+          color: '#a67e77',
           }}>Checkout
       </Typography>
       
       {/* Total Price */}
       <Box sx={{ width: '96%', marginBottom: 3}}>
-        <Typography fontFamily = 'Mandali, sans-serif' >Total Payment: {totalPrice} €</Typography>
+        <Typography 
+         fontFamily = 'Mandali, sans-serif'
+         color= '#a67e77'
+         >Total Payment: {totalPrice} €</Typography>
       </Box>
 
       <Box sx={{ 
@@ -150,13 +155,13 @@ const CheckoutPage = () => {
         
           <Box
           component="img"
-          src={whitelook}
-          alt="redimage"
+          src={birds}
+          alt="birds"
           sx={{
             width: '100%', 
-            borderRadius: 2, 
-            border: '3px solid white',  
-            boxShadow: 3,
+            borderRadius: 1, 
+            border: { xs: '2px solid white', sm: '3px solid white' },
+            boxShadow: '10px 10px 10px rgba(255, 182, 193, 0.4)',
             objectFit: 'cover',
           }}
         />

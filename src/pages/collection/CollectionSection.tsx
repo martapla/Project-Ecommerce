@@ -85,7 +85,7 @@ const CollectionSection: React.FC<CollectionSectionProps> = ({
           width: { xs: '100%', md: '90%' },
           margin: '0 auto',
           gap: { xs: 4, md: 2 },
-          flexDirection: { xs: 'column', md: 'row' },
+          flexDirection: { xs: 'row', md: 'row' },
         }}
       >
         {products.map((product, index) => (

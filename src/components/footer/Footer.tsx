@@ -40,19 +40,19 @@ const Footer = () => {
         }}>
 
         <IconButton color="inherit"
-          onClick={() => alert('Made with love for you! 💖')}
+          onClick={() => alert('Happy you like it 💖')}
         >
            <FavoriteBorderIcon fontSize="small"/>
         </IconButton>
         
         <IconButton color="inherit"
-          onClick={() => alert('Insta coming soon! 🏖️')}
+          onClick={() => alert('Insta coming soon 🏖️')}
         >
            <InstagramIcon fontSize="small"/>
         </IconButton>
 
         <IconButton color="inherit" 
-          onClick={() => alert('Hope you liked my website!  ✨👩‍💻✨')}
+          onClick={() => alert('Hope you liked my website ✨👩‍💻✨')}
         >
            <GitHubIcon fontSize="small" />
         </IconButton>
