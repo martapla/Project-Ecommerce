@@ -34,7 +34,7 @@ export default function NavBar() {
   ];
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box sx={{ flexGrow: 1, mt:1 }}>
       <AppBar
         position="static"
         sx={{ backgroundColor: '#FFE8E8', boxShadow: 'none' }}
@@ -56,6 +56,7 @@ export default function NavBar() {
                 textShadow: '2px 2px 1px rgba(245, 153, 153, 0.5)', 
                 mt:{ xs: '2px', sm: '20px' }, 
                 ml:{ xs: '6px', sm: '3px' }, 
+                mr:{ xs: '6px', sm: '3px' }, 
               }}
             >
               MINÏM
@@ -82,7 +83,11 @@ export default function NavBar() {
 
           </IconButton>
           {/* Not visible for mobile  Navbar*/}
-          <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
+          <Box sx={{ 
+            display: { xs:'none', md:'flex'},
+            mr:'14px',
+            mt:'6px'
+            }}>
             {navLinks.map((link) => (
               <Typography
                 key={link.text}

@@ -316,78 +316,78 @@ const Landing = () => {
           </Box>
         </Box>
 
-       {/* Section - About Us */}
-<Box
-  sx={{
-    width: '90%',
-    display: 'flex',
-    flexDirection: { xs: 'column', md: 'row-reverse' }, // texto a la derecha en desktop
-    justifyContent: 'start',
-    gap: 8,
-    pt: { xs: '30px', sm: '50px' },
-    pb: { xs: '40px', sm: '50px' },
-    mt: { xs: '50px', sm: '80px' },
-    border: '2px solid white',
-    backgroundColor: '#f7f4f3', 
-    borderRadius: '8px', 
-  }}
->
-  {/* Texto */}
-  <Box
-    sx={{
-      flex: 1,
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      flexDirection: 'column',
-      px: { xs: 2, sm: 4 },
-    }}
-  >
-   <Typography
-  sx={{
-    fontFamily: 'Gantari, serif',
-    fontSize: { xs: '40px', sm: '56px' },
-    fontWeight: 300,
-    color: '#a67e77',
-    textAlign: 'center',
-  }}
->
-  About Us
-</Typography>
+        {/* Section - About Us */}
+        <Box
+          sx={{
+            width: '90%',
+            display: 'flex',
+            flexDirection: { xs: 'column', md: 'row-reverse' }, // texto a la derecha en desktop
+            justifyContent: 'start',
+            gap: 8,
+            pt: { xs: '30px', sm: '50px' },
+            pb: { xs: '40px', sm: '50px' },
+            mt: { xs: '50px', sm: '80px' },
+            border: '2px solid white',
+            backgroundColor: '#f7f4f3',
+            borderRadius: '8px',
+          }}
+        >
+          {/* Texto */}
+          <Box
+            sx={{
+              flex: 1,
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              flexDirection: 'column',
+              px: { xs: 2, sm: 4 },
+            }}
+          >
+            <Typography
+              sx={{
+                fontFamily: 'Gantari, serif',
+                fontSize: { xs: '40px', sm: '56px' },
+                fontWeight: 300,
+                color: '#a67e77',
+                textAlign: 'center',
+              }}
+            >
+              About Us
+            </Typography>
 
-<Typography
-  sx={{
-    fontFamily: 'Gantari, sans-serif',
-    fontSize: { xs: '18px', sm: '20px' },
-    fontWeight: 300,
-    color: '#a67e77',
-    textAlign: 'start',
-    mt: 2,
-    lineHeight: 1.6,
-    px: { xs: 2, sm: 4 },
-  }}
->
-  All the patterns, designs, and web development you see here were crafted by the same person — a multidisciplinary artist and front-end developer passionate about visual storytelling, color harmony, and code aesthetics. This project blends both design and development into a single creative vision.
-</Typography>
-  </Box>
+            <Typography
+              sx={{
+                fontFamily: 'Gantari, sans-serif',
+                fontSize: { xs: '18px', sm: '20px' },
+                fontWeight: 300,
+                color: '#a67e77',
+                textAlign: 'start',
+                mt: 2,
+                lineHeight: 1.6,
+                px: { xs: 2, sm: 4 },
+              }}
+            >
+              All the designs, patterns and web development you see here were crafted by the same person. A multidisciplinary designer and front-end developer who enjoys creating visual storytelling, color harmony and code aesthetics. This project blends both design and development into a single creative vision.
+            </Typography>
+          </Box>
 
-  {/* Image */}
-  <Box sx={{ flex: 1, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-    <Box
-      component="img"
-      src={roundpa}
-      alt="manequin"
-      sx={{
-        width: { xs: '70%', sm: '60%', md: '80%' }, 
-        borderRadius: '50%',
-        border: '2px solid #d2b8b2',
-        boxShadow: '6px 10px 20px rgba(166, 126, 119, 0.3)',
-        backgroundColor: 'white',
-        objectFit: 'cover',
-      }}
-    />
-  </Box>
-</Box>
+          {/* Image */}
+          <Box sx={{ flex: 1, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+            <Box
+              component="img"
+              src={roundpa}
+              alt="manequin"
+              sx={{
+                width: { xs: '70%', sm: '60%', md: '80%' },
+                borderRadius: '50%',
+                border: '2px solid #d2b8b2',
+                boxShadow: '6px 10px 20px rgba(166, 126, 119, 0.3)',
+                backgroundColor: 'white',
+                objectFit: 'cover',
+              }}
+            />
+          </Box>
+        </Box>
 
         {/* Section - Get in Touch  */}
         <Box
@@ -497,7 +497,7 @@ const Landing = () => {
               alt="tag"
               sx={{
                 width: '100%',
-                height:'auto',
+                height: 'auto',
                 borderRadius: 1,
                 border: { xs: '2px solid white', sm: '3px solid white' },
                 boxShadow: '10px 10px 10px rgba(255, 182, 193, 0.4)',

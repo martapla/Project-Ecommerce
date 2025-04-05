@@ -97,37 +97,80 @@ const CheckoutPage = () => {
         >
 
           <TextField 
-            label="Full Name" 
-            variant="outlined" 
+            placeholder="Full Name" 
             value={name} 
             onChange={(e) => setName(e.target.value)} 
             required 
-            sx={{ marginBottom: 2 }}
+            sx={{ 
+              marginBottom: 2,
+              color: '#a67e77',
+                "& .MuiOutlinedInput-root": {
+
+                "&:hover fieldset": {
+                  border: "1px solid #a67e77",
+                },
+                "&.Mui-focused fieldset": {
+                  border: "2px solid white",
+                },
+              },
+            }}
           />
           <TextField 
-            label="Email" 
-            variant="outlined" 
-            type="email" 
+            placeholder="Email" 
             value={email} 
             onChange={(e) => setEmail(e.target.value)} 
             required 
-            sx={{ marginBottom: 2 }}
+            sx={{ 
+              marginBottom: 2,
+              color: '#a67e77',
+                "& .MuiOutlinedInput-root": {
+
+                "&:hover fieldset": {
+                  border: "1px solid #a67e77",
+                },
+                "&.Mui-focused fieldset": {
+                  border: "2px solid white",
+                },
+              },
+            }}
           />
           <TextField 
-            label="Home Address" 
-            variant="outlined" 
+            placeholder="Home Address" 
             value={address} 
             onChange={(e) => setAddress(e.target.value)} 
             required 
-            sx={{ marginBottom: 2 }}
+            sx={{ 
+              marginBottom: 2,
+              color: '#a67e77',
+                "& .MuiOutlinedInput-root": {
+
+                "&:hover fieldset": {
+                  border: "1px solid #a67e77",
+                },
+                "&.Mui-focused fieldset": {
+                  border: "2px solid white",
+                },
+              },
+            }}
           />
           <TextField 
-            label="Telephone Number" 
-            variant="outlined" 
+            placeholder="Telephone Number" 
             value={phone} 
             onChange={(e) => setPhone(e.target.value)} 
             required 
-            sx={{ marginBottom: 2 }}
+            sx={{ 
+              marginBottom: 2,
+              color: '#a67e77',
+                "& .MuiOutlinedInput-root": {
+
+                "&:hover fieldset": {
+                  border: "1px solid #a67e77",
+                },
+                "&.Mui-focused fieldset": {
+                  border: "2px solid white",
+                },
+              },
+            }}
           />
         </Box>
 

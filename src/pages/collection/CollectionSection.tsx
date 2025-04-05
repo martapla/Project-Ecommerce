@@ -61,7 +61,6 @@ const CollectionSection: React.FC<CollectionSectionProps> = ({
         </Typography>
 
         <Typography
-          variant="h2"
           sx={{
             fontFamily: 'Gantari, serif',
             fontSize: { xs: '18px', sm: '20px' },
@@ -69,8 +68,8 @@ const CollectionSection: React.FC<CollectionSectionProps> = ({
             color:'#a67e77',
             textAlign: 'left',
             lineHeight: 1.8,
-            mb: 6,
-            width: { xs: '80%', md: '86%' }, 
+            mb: {xs: '20px', md: '40px'},
+            width: { xs: '90%', md: '86%' }, 
           }}
         >
           {description}
@@ -82,9 +81,9 @@ const CollectionSection: React.FC<CollectionSectionProps> = ({
         justifyContent="center"
         alignItems="center"
         sx={{
-          width: { xs: '100%', md: '90%' },
+          width: { xs: '94%', md: '90%' },
           margin: '0 auto',
-          gap: { xs: 4, md: 2 },
+          gap: { xs: 1, md: 2 },
           flexDirection: { xs: 'row', md: 'row' },
         }}
       >

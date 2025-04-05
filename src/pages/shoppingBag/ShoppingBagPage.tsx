@@ -10,8 +10,6 @@ import { Product } from '../checkout/CheckoutPage';
 
 const ShoppingBagPage = () => {
   const { selectedProducts, removeProduct } = useContext(ShoppingBagContext);
-  // const location = useLocation();  
-  // const { selectedProducts } = location.state || { selectedProducts: [] };  
   const navigate = useNavigate();
 
   const handleRemoveProduct = (product: Product) => {
@@ -28,20 +26,21 @@ const ShoppingBagPage = () => {
           flexDirection: { xs: 'column', md: 'row' }, 
           justifyContent: 'center', 
           alignItems: 'center', 
-          py: { xs: 2, md: 4 },
-          margin: '20px auto',
-          mt: '20px',
-          mb:{ xs: '0px', md: '10px' }, 
-          width: '100%',
+          py: { xs: 1, sm: 1 },
+          mt: { xs: '30px', md: '60px' }, 
+          width: { xs: '100%', sm: '100%', md: '100%' },
+          margin:' 0px auto',
+          // gap:'4px'
         }}
       >
                     {/* Products */}
           <Box 
           sx={{
-            width: { xs: '85%', sm: '70%', md: '50%' },
+            width: { xs: '80%', sm: '60%', md: '40%' },
             boxSizing: 'border-box',
             border:2, borderRadius:1, borderColor: 'white',
-            ml:{ md: '20px' }, 
+            ml:{ md: '80px' }, 
+            mb: '30px'
           }}
           >
 
@@ -101,7 +100,8 @@ const ShoppingBagPage = () => {
           sx={{
             flex: 1,
             padding: 2,
-            width: { xs: '100%', sm: '90%', md: '45%' },
+            
+            width: { xs: '85%', sm: '90%', md: '45%' },
             boxSizing: 'border-box',
           }}
           >
@@ -126,7 +126,7 @@ const ShoppingBagPage = () => {
               backgroundColor: 'white',
               color: '#e57390',
               border: '1px solid #e57390',
-              padding: { xs: '14px', sm: '20px' },          
+              padding: { xs: '14px', sm: '16px' },          
               fontSize: { xs: '16px', sm: '20px' },     
               borderRadius: '50%',
               fontFamily: 'Mandali, sans-serif',
@@ -143,7 +143,7 @@ const ShoppingBagPage = () => {
               mb: { xs: '30px', md: '40px' },
             }}
           >
-            Go to Checkout
+            Checkout
           </Button>
       </Box>
     </>
