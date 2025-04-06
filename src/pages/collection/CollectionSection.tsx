@@ -81,9 +81,9 @@ const CollectionSection: React.FC<CollectionSectionProps> = ({
         justifyContent="center"
         alignItems="center"
         sx={{
-          width: { xs: '94%', md: '90%' },
+          width: { xs: '94%', md: '80%' },
           margin: '0 auto',
-          gap: { xs: 1, md: 2 },
+          gap: { xs: 1, md: 6 },
           flexDirection: { xs: 'row', md: 'row' },
         }}
       >

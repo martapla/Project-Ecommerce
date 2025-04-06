@@ -24,7 +24,7 @@ const CheckoutPage = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [address, setAddress] = useState('');
-  const [phone, setPhone] = useState('');
+  const [card, setCard] = useState('');
 
   const totalPrice = selectedProducts.reduce((sum, product) => sum + product.price, 0);
 
@@ -154,9 +154,9 @@ const CheckoutPage = () => {
             }}
           />
           <TextField 
-            placeholder="Telephone Number" 
-            value={phone} 
-            onChange={(e) => setPhone(e.target.value)} 
+            placeholder="Card Number" 
+            value={card} 
+            onChange={(e) => setCard(e.target.value)} 
             required 
             sx={{ 
               marginBottom: 2,
@@ -176,16 +176,20 @@ const CheckoutPage = () => {
 
         
         <Button
-          type="submit"
-          variant="contained"
           onClick={() => alert('Check your email to confirm.')}
           sx={{
-
+            width: '50%',
             backgroundColor: '#e57390',
             color: 'white',
-            ':hover': {
-              backgroundColor: '#e6b8c8',
-              color: 'white',
+            boxShadow: '4px 4px 1px rgba(245, 153, 153, 0.5)',
+            padding: '6px',
+            fontFamily: 'Mandali, sans-serif',
+            fontSize: 18,
+            textTransform: 'none',
+            '&:hover': {
+              backgroundColor: '#fcf3f3',
+              color: '#e57390',
+              border:'1px solid #e57390'
             },
           }}
         >

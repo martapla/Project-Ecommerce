@@ -33,7 +33,7 @@ const Landing = () => {
           sx={{
             fontFamily: 'Kodchasan, sans-serif',
             fontWeight: 700,
-            fontSize: { xs: '60px', sm: '90px' },
+            fontSize: { xs: '70px', sm: '90px' },
             color: '#ef233c',
             WebkitTextStroke: '0.5px white',
             mt: { xs: '-30px', md: '10px' },
@@ -177,18 +177,18 @@ const Landing = () => {
             color: '#e57390',
             border: '1px solid #e57390',
             padding: { xs: '16px', sm: '20px' },
-            fontSize: { xs: '16px', sm: '20px' },
+            fontSize: { xs: '18px', sm: '20px' },
             borderRadius: '50%',
             fontFamily: "Gantari, serif",
             fontWeight: 300,
             textTransform: 'none',
-            boxShadow: '-10px 0px 0px #e57390',
+            boxShadow: '-8px 0px 0px #e57390',
             transition: 'all 0.3s ease-in-out',
             '&:hover': {
               backgroundColor: 'white',
               color: '#e57390',
               borderColor: '#e57390',
-              boxShadow: '10px 0px 0px #e57390',
+              boxShadow: '8px 0px 0px #e57390',
             },
             mt: { xs: '60px', md: '80px' },
           }}
@@ -321,7 +321,7 @@ const Landing = () => {
           sx={{
             width: '90%',
             display: 'flex',
-            flexDirection: { xs: 'column', md: 'row-reverse' }, // texto a la derecha en desktop
+            flexDirection: { xs: 'column', md: 'row-reverse' }, 
             justifyContent: 'start',
             gap: 8,
             pt: { xs: '30px', sm: '50px' },
@@ -332,7 +332,7 @@ const Landing = () => {
             borderRadius: '8px',
           }}
         >
-          {/* Texto */}
+          {/* Text */}
           <Box
             sx={{
               flex: 1,
@@ -471,16 +471,18 @@ const Landing = () => {
               onClick={() => alert('Submited !!!')}
               sx={{
                 margin: { xs: '40px auto', md: '40px auto' },
-                width: '80%',
+                width: '60%',
                 backgroundColor: '#e57390',
                 color: 'white',
                 boxShadow: '4px 4px 1px rgba(245, 153, 153, 0.5)',
-                padding: '12px',
+                padding: '10px',
                 fontFamily: 'Mandali, sans-serif',
                 fontSize: 18,
                 textTransform: 'none',
                 '&:hover': {
-                  backgroundColor: '#d26080',
+                  backgroundColor: '#fcf3f3',
+                  color: '#e57390',
+                  border:'1px solid #e57390'
                 },
               }}
             >

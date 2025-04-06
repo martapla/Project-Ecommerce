@@ -100,23 +100,23 @@ const CollectionPage: React.FC = ()  => {
       sx={{
         backgroundColor: 'white',       
         color:'#f57e75',           
-        border: '1px solid #f57e75',    
+        border: '1px solid #e57390',    
         padding: { xs: '14px', sm: '20px' },          
-        fontSize: { xs: '16px', sm: '20px' },               
+        fontSize: { xs: '18px', sm: '20px' },               
         borderRadius: '50%',             
         fontFamily: 'Gantari, serif', 
         fontWeight: 300,
         textTransform: 'none',          
-        boxShadow: { xs: '-6px 0px 0px #f57e75', md: '-10px 0px 0px #f57e75' },     
+        boxShadow: '-8px 0px 0px #e57390',     
         transition: 'all 0.3s ease-in-out',
         '&:hover': {
           backgroundColor: 'white', 
           color:  '#e57390',               
           borderColor:  '#e57390',          
-          boxShadow: '10px 0px 0px #e57390',   
+          boxShadow: '8px 0px 0px #e57390',   
         },
         mb: { xs: '60px', md: '60px' }, 
-        mt: { xs: '20px', md: '40px' }, 
+        mt: { xs: '0px', md: '40px' }, 
         display: 'block', margin: '0 auto'                    
       }}
     >

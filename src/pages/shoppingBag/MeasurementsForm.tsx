@@ -113,17 +113,21 @@ const MeasurementsForm = () => {
       />
       
       <Button
-        type="submit"
-        variant="contained"
         sx={{
+          width:'50%',
+          margin:'0 auto',
           backgroundColor: '#e57390',
           color: 'white',
+          boxShadow: '4px 4px 1px rgba(245, 153, 153, 0.5)',
+          padding: '6px',
+          fontFamily: 'Mandali, sans-serif',
+          fontSize: 18,
+          textTransform: 'none',
           ':hover': {
-            backgroundColor: '#e6b8c8',
-            color: 'white',
+            backgroundColor: 'white',
+            color: '#e57390',
+            border:'1px solid #e57390'
           },
-          width:'60%',
-          margin:'0 auto'
         }}
       >
         {submitted ? 'Submitted' : 'Submit'}
