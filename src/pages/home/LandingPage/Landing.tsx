@@ -33,7 +33,7 @@ const Landing = () => {
           sx={{
             fontFamily: 'Kodchasan, sans-serif',
             fontWeight: 700,
-            fontSize: { xs: '70px', sm: '90px' },
+            fontSize: { xs: '60px', sm: '90px' },
             color: '#ef233c',
             WebkitTextStroke: '0.5px white',
             mt: { xs: '-30px', md: '10px' },

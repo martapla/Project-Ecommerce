@@ -51,7 +51,7 @@ export default function NavBar() {
                 fontWeight: 600,
                 textDecoration: 'none',
                 WebkitTextStroke: '0.5px white',
-                fontSize: { xs: '24px', sm: '36px' }, 
+                fontSize: { xs: '30px', sm: '36px' }, 
                 color: '#ef233c',
                 textShadow: '2px 2px 1px rgba(245, 153, 153, 0.5)', 
                 mt:{ xs: '2px', sm: '20px' }, 
