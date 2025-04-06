@@ -1,27 +1,33 @@
-# E-Commerce Project
+# 🛍️ E-Commerce Project
 
-This is a Made to Measure Online Shop.
+A Made-to-Measure Online Shop, fully custom and fully responsive.
 
+## Live Demo
+👉 [Visit the live site](https://project-ecommerce-opal.vercel.app/)
 
-## Description
-In this website you´ll find a `Landing Page` with a short description of the brand.
-There is a `Collections` section where you can select the products.
-Once you select all you wish, it directs you to the `Wishlist`, where you can see your selection and also a form to introduce your measurements.
-From here you can go to the `Checkout`.
-
-
-## Tech
-
- - React.js
- - React Router
- - Context
- - TypeScript
+## 📝 Overview
+This is a personalized e-commerce experience where users can explore a curated collection of made-to-measure products.
+### Features:
+- The main `Landing Page` introducing the brand and concept.
+- A `Collections` section where users can browse and select their favorite items.
+- The `Wishlist` page to review selections and enter personal measurements.
+- A final `Checkout` process to complete the purchase.
 
 
- ## Design
 
- - The UI is design by me using `Figma` and `Material UI`. 
- - The project is also `fully responsive`, for mobile, tablet and desktop.
+## 🛠️ Tech Stack
+- **React.js**
+- **React Router**
+- **Context API**
+- **TypeScript**
+
+
+
+ ## 🎨 Design
+
+- The entire UI was designed by me using **Figma** and built with **Material UI**.
+- The layout is **fully responsive**, optimized for mobile, tablet, and desktop.
+
 
 
 
